@@ -1,0 +1,25 @@
+.profile-sidebar {
+  background-color: #00B7D1;
+  color: #FFFFFF;
+  font-family: Arial-BoldMT;
+  font-size: 18px;
+}
+.profile-sidebar li {
+  /*height: 21px;*/
+  padding: 20px;
+}
+.profile-sidebar .greetings {
+  /*height: 51px;*/
+  font-family: ArialMT;
+  font-size: 36px;
+}
+.profile-sidebar .greeting-name {
+  font-family: Arial-Black;
+  font-size: 36px;
+
+}
+h2 {
+  color: #00B7D1;
+  font-family: Arial-Black;
+  font-size: 36px;
+}

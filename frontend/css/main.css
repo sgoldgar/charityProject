@@ -1,0 +1,70 @@
+.header-container {
+  background-color: #FFFFFF;
+}
+
+/*nav bar and social media icons in footer*/
+nav ul li, .social-media li {
+  display: inline-block;
+  text-decoration: none;
+
+}
+
+/*for the static nav bar*/
+nav ul li {
+  color: #757575;
+  font-family: Arial-BoldMT;
+  font-size: 14px;
+  /*line: 16px (not sure wat );*/
+}
+
+.footer-links li, .profile-sidebar li {
+  list-style: none;
+}
+
+/*______________________________________*/
+
+h1 {
+  color: #FFFFFF;
+  font-family:  Arial-Black;
+  font-size: 36px;
+}
+/*for all the buttons on the pages*/
+.button {
+  background-color: #80B773;
+  radius: 100px;
+  /*border 1px inside (margin? from UX)*/
+  font-size: 14px;
+  font-family: Arial-Black;
+  /*line 19px (1.4) also from UX?*/
+
+}
+
+
+/*footer styling*/
+.footer-container {
+  background-color: black;
+  color: white;
+}
+.footer-links a {
+  color: #FFFFFF;
+}
+
+
+/*________________________________________________*/
+/*general form css*/
+
+form {
+  background-color: #FFFFFF;
+  color: #9B9B9B;
+  font-family: Arial-BoldMT;
+  font-size: 12px;
+  radius: 5px;
+}
+form h2 {
+  color: #00B7D1;
+  font-family: Arial-Black;
+  font-size: 36px;
+}
+form input {
+  radius: 5px;
+}
