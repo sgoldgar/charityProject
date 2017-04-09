@@ -1,0 +1,103 @@
+.header-container {
+  background-color: #FFFFFF;
+}
+
+/*nav bar and social media icons in footer*/
+nav ul li, .social-media li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-links li, .profile-sidebar li, .inner-content li {
+  list-style: none;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-family:  Arial-Black;
+  font-size: 36px;
+}
+
+/*for all the buttons on the pages*/
+.button {
+  background-color: #80B773;
+  border-radius: 100px;
+  /*border 1px inside (margin? from UX)*/
+  font-size: 14px;
+  font-family: Arial-Black;
+  /*line 19px (1.4) also from UX?*/
+
+}
+
+/*HEADER*/
+
+.header-container, header{
+  box-shadow: inset 0px -8px 5px -6px rgba(0,0,0,0.18);
+}
+
+.header-logo{
+  margin: 3% 10%;
+}
+
+nav ul{
+  margin-top: 1%;
+  padding: 0;
+}
+
+/*nav bar*/
+nav ul li {
+  margin: 4%;
+  /*line: 16px (not sure wat );*/
+}
+
+/*push profile link further right*/
+nav ul li:last-child{
+  margin-left: 15%;
+}
+
+nav ul li a{
+  color: #757575;
+  font-family: Arial-BoldMT;
+  font-size: 14px;
+}
+
+/*FORMS*/
+
+form {
+  background-color: #FFFFFF;
+  color: #9B9B9B;
+  font-family: Arial-BoldMT;
+  font-size: 12px;
+  radius: 5px;
+}
+form h2 {
+  color: #00B7D1;
+  font-family: Arial-Black;
+  font-size: 36px;
+}
+form input {
+  radius: 5px;
+}
+
+
+
+
+/*FOOTER*/
+.footer-container {
+  background-color: #616161;
+  color: #FFFFFF;
+  /*font-family: ArialMT;*/
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding: 2em 15em;
+}
+.footer-links a {
+  color: #FFFFFF;
+  /*font-family: Arial-BoldMT;*/
+  font-weight: 500;
+}
+
+.social-media li {
+  margin: 5%;
+}
