@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main-container {
   margin: 0 auto;
 }
@@ -41,3 +42,43 @@ h3{
   display: inline-block;
   padding-right: 20px;
 }
+=======
+h3{
+  color: #FFFFFF;
+}
+.search-bar {
+  background-color: #FFFFFF;
+  color:
+  padding: 10px;
+}
+
+#search {
+    width:90%;
+}
+/*row w/ all the pre-selected donatiion tags*/
+.search-items {
+    background-color: lightgray;
+}
+.search-container {
+    background-color: #FFFFFF;
+}
+.items-collection{
+    margin:20px;
+    display: inline-block;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+    margin:5px;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+}
+/*.items-collection label.itemcontent{
+    width:100%;
+}*/
+/*.items-collection .btn-group{
+    width:90%
+}*/
+>>>>>>> 81c8da73b2570efb78b69423e0286527306dc07e

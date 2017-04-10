@@ -5,6 +5,7 @@ $(function() {
     console.log( "test!");
 });
 
+<<<<<<< HEAD
 // all of this is NOT necessary, bootstrap does it
 
 $('.group-btns .btn').on('click',function(event){
@@ -53,4 +54,14 @@ self.addClass("selectit");
         return;
         }
 
+=======
+$(function () {
+    $('#search').on('keyup', function () {
+        var pattern = $(this).val();
+        $('.items-collection .item').hide();
+        $('.items-collection .item').filter(function () {
+            return $(this).text().match(new RegExp(pattern, 'i'));
+        }).show();
+    });
+>>>>>>> 81c8da73b2570efb78b69423e0286527306dc07e
 });
