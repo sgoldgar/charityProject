@@ -38,23 +38,26 @@
       <div class="container main-container">
         <div class="row main-row">
           <!-- left side bar, doesn't change -->
-          <div class="col-md-4 col-sm-12 col-xs-12 ">
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <!-- main greeting -->
+            <div class="greetings">
+              <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
+              <div class="greeting-container">
+                <h2>Greetings <br><span>NAME!</span></h2>
+              </div>
+              <div class="greeting-image-container">
+                <img src="assets/Profile-Icon.svg" alt="profile-picture">
+              </div>
+
+
+            </div>
             <ul class="profile-sidebar">
-              <!-- main greeting -->
-              <li class="greetings">
-                <!-- name will be generated from ajax call and add an exclamation point, add id on jquery-->
-                <p>Greetings
-                <span class="greeting-name">NAME</span></p>
-
-                <img src="assets/profile-icon.svg" alt="profile-picture">
-              </li>
-
               <!-- donations link -->
               <li>
                 <a href="#">Donations</a>
               </li>
               <!-- messages link -->
-              <li>
+              <li class="selected-link">
                 <a href="#">Messages</a>
               </li>
               <!-- notifications link -->
@@ -68,14 +71,14 @@
               <!-- donation request button -->
               <li>
                 <button class="donation-button button">
-                  <span class="plus-sign">+</span> Donation Request
+                  <span class="plus-sign">+</span><br> Donation<br> Request
                 </button>
               </li>
             </ul>
           </div>
           <!-- main content, changes based on where you navigate -->
           <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="inner-title">Donations History</h2>
+            <h2 class="inner-title">Messages</h2>
             <section class="inner-content"></section>
           </div>
         </div>
