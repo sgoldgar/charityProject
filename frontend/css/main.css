@@ -1,64 +1,79 @@
 .header-container {
-  max-width: cover;
+  background-color: #FFFFFF;
 }
 
 header {
   max-width: 100%;
   background-color: #FFFFFF;
 }
-/*nav bar and social media icons in footer*/
-nav ul li, .social-media li {
-  display: inline-block;
-  text-decoration: none;
-
-}
-
-/*for the static nav bar*/
-nav ul li {
-  color: #757575;
-  font-family: Arial-BoldMT;
-  font-size: 14px;
-  /*line: 16px (not sure wat );*/
-}
-
-.footer-links li, .profile-sidebar li {
-  list-style: none;
-}
-
-/*______________________________________*/
 
 h1 {
   color: #FFFFFF;
   font-family:  Arial-Black;
   font-size: 36px;
 }
+
+h3{
+  color: #FFFFFF;
+}
+
+/*nav bar and social media icons in footer*/
+nav ul li, .social-media li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-links li, .profile-sidebar li, .inner-content li {
+  list-style: none;
+}
+
+
 /*for all the buttons on the pages*/
 .button {
   background-color: #80B773;
-  radius: 100px;
-  border 1px inside (margin? from UX)
+  color: white;
+  border-radius: 100px;
+  /*border 1px inside (margin? from UX)*/
   font-size: 14px;
   font-family: Arial-Black;
-  /*line 19px (1.4) also from UX?}*/
+  /*line 19px (1.4) also from UX?*/
 }
 
-footer  {
-  background-color: black;
-  color: white;
-  font-family: ArialMT;
-  font-size: 10px;
+
+/*HEADER*/
+
+.header-container, header{
+  box-shadow: inset 0px -8px 5px -6px rgba(0,0,0,0.18);
 }
-.footer-links a {
-  color: #FFFFFF;
+
+.header-logo{
+  margin: 5% 10%;
+}
+
+nav ul{
+  margin-top: 1%;
+  padding: 0;
+}
+
+nav ul li {
+  color: #757575;
   font-family: Arial-BoldMT;
-}
-footer .col-md-4 {
-  margin-top: 10px;
+  font-size: 14px;
+  margin: 4%;
 }
 
-/*________________________________________________*/
-/*general form css*/
+/*push profile link further right*/
+nav ul li:last-child{
+  margin-left: 15%;
+}
 
+nav ul li a{
+  color: #757575;
+  font-family: Arial-BoldMT;
+  font-size: 14px;
+}
+
+/*FORMS*/
 form {
   background-color: #FFFFFF;
   color: #9B9B9B;
@@ -74,3 +89,136 @@ form h2 {
 form input {
   radius: 5px;
 }
+
+/*SEARCH BARS*/
+.search-bar {
+  background-color: #FFFFFF;
+  color:
+  padding: 10px;
+}
+
+#search {
+    width:90%;
+}
+/*row w/ all the pre-selected donatiion tags*/
+.search-items {
+    background-color: lightgray;
+}
+.search-container {
+    background-color: #FFFFFF;
+}
+.items-collection{
+    margin:20px;
+    display: inline-block;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+    margin:5px;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+}
+/*.items-collection label.itemcontent{
+    width:100%;
+}*/
+/*.items-collection .btn-group{
+    width:90%
+}*/
+
+/*PROFILE SIDEBAR*/
+.greetings {
+  font-family: ArialMT;
+  font-size: 36px;
+  width: 100%;
+  background-color: #9DD3E0;
+  color: #FFFFFF;
+  padding: 15% 0 10% 0;
+  font-weight: lighter;
+}
+
+.greeting-container{
+  width: 50%;
+  display: inline;
+}
+
+.greetings h2, .greetings span{
+  margin-left: 15%;
+  display: inline;
+}
+
+.greetings h2{
+  font-weight: lighter;
+}
+
+.greetings span {
+  font-weight: 800;
+}
+
+.greeting-image-container{
+  max-width: 50%;
+  float: right;
+  padding-right: 15%;
+}
+
+.profile-sidebar{
+  background-color: #00B7D1;
+  font-family: Arial-BoldMT;
+  height: 100%;
+  padding-bottom: 100%;
+  padding-left: 0;
+}
+
+.profile-sidebar li {
+  font-size: 18px;
+  margin-bottom: 5%;
+  padding: 10%;
+  font-weight: 200;
+  border-bottom: 3px solid #0ac2db;
+}
+
+.profile-sidebar li a {
+  color: #FFFFFF;
+  font-weight: 200;
+  margin-left: 5%;
+}
+
+.profile-sidebar li:last-child{
+  border-bottom: none;
+}
+
+.profile-sidebar button{
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  border: none;
+  font-weight: lighter;
+  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
+  margin-left: 25%;
+}
+
+
+/*FOOTER*/
+.footer-container {
+  background-color: #616161;
+  color: #FFFFFF;
+  /*font-family: ArialMT;*/
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding: 2em 15em;
+}
+.footer-links a {
+  color: #FFFFFF;
+  /*font-family: Arial-BoldMT;*/
+  font-weight: 500;
+}
+
+.social-media li {
+  margin: 5%;
+}
+
+/*footer .col-md-4 {
+  margin-top: 10px;
+}*/
