@@ -21,12 +21,12 @@ h1 {
 /*for all the buttons on the pages*/
 .button {
   background-color: #80B773;
+  color: white;
   border-radius: 100px;
   /*border 1px inside (margin? from UX)*/
   font-size: 14px;
   font-family: Arial-Black;
   /*line 19px (1.4) also from UX?*/
-
 }
 
 /*HEADER*/
@@ -36,7 +36,7 @@ h1 {
 }
 
 .header-logo{
-  margin: 3% 10%;
+  margin: 5% 10%;
 }
 
 nav ul{
@@ -79,6 +79,116 @@ form input {
   radius: 5px;
 }
 
+/*SEARCH BARS*/
+h3{
+  color: #FFFFFF;
+}
+.search-bar {
+  background-color: #FFFFFF;
+  color:
+  padding: 10px;
+}
+
+#search {
+    width:90%;
+}
+/*row w/ all the pre-selected donatiion tags*/
+.search-items {
+    background-color: lightgray;
+}
+.search-container {
+    background-color: #FFFFFF;
+}
+.items-collection{
+    margin:20px;
+    display: inline-block;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+    margin:5px;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+}
+/*.items-collection label.itemcontent{
+    width:100%;
+}*/
+/*.items-collection .btn-group{
+    width:90%
+}*/
+
+/*PROFILE SIDEBAR*/
+.greetings {
+  font-family: ArialMT;
+  font-size: 36px;
+  width: 100%;
+  background-color: #9DD3E0;
+  color: #FFFFFF;
+  padding: 15% 0 10% 0;
+  font-weight: lighter;
+}
+
+.greeting-container{
+  width: 50%;
+  display: inline;
+}
+
+.greetings h2, .greetings span{
+  margin-left: 15%;
+  display: inline;
+}
+
+.greetings h2{
+  font-weight: lighter;
+}
+
+.greetings span {
+  font-weight: 800;
+}
+
+.greeting-image-container{
+  max-width: 50%;
+  float: right;
+  padding-right: 15%;
+}
+
+.profile-sidebar{
+  background-color: #00B7D1;
+  font-family: Arial-BoldMT;
+  height: 100%;
+  padding-bottom: 100%;
+  padding-left: 0;
+}
+
+.profile-sidebar li {
+  font-size: 18px;
+  margin-bottom: 5%;
+  padding: 10%;
+  font-weight: 200;
+  border-bottom: 3px solid #0ac2db;
+}
+
+.profile-sidebar li a {
+  color: #FFFFFF;
+  font-weight: 200;
+  margin-left: 5%;
+}
+
+.profile-sidebar li:last-child{
+  border-bottom: none;
+}
+
+.profile-sidebar button{
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  border: none;
+  font-weight: lighter;
+  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
+  margin-left: 25%;
+}
 
 
 
