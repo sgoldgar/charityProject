@@ -25,7 +25,7 @@ $('.group-btns .btn').on('click',function(event){
 			self.removeClass('btn-primary');
 
             }
-
+            console.log(self);
           return;
         }
 
@@ -50,5 +50,22 @@ self.addClass("selectit");
 
         return;
         }
+
+// submitting button search parameters
+$(".submitSearch").on('click', function(event){
+  event.preventDefault();
+  var needSearch = [] ;
+  $.each($(".selectit"), function(){
+        needSearch.push($(this).text());
+    });
+    console.log(needSearch);
+  });
+  $.ajax({
+    url: "test.html",
+    context: document.body
+  }).done(function() {
+    $( this ).addClass( "done" );
+    
+  });
 
 });
