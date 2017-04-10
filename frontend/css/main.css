@@ -2,6 +2,21 @@
   background-color: #FFFFFF;
 }
 
+header {
+  max-width: 100%;
+  background-color: #FFFFFF;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-family:  Arial-Black;
+  font-size: 36px;
+}
+
+h3{
+  color: #FFFFFF;
+}
+
 /*nav bar and social media icons in footer*/
 nav ul li, .social-media li {
   display: inline-block;
@@ -12,11 +27,6 @@ nav ul li, .social-media li {
   list-style: none;
 }
 
-h1 {
-  color: #FFFFFF;
-  font-family:  Arial-Black;
-  font-size: 36px;
-}
 
 /*for all the buttons on the pages*/
 .button {
@@ -28,6 +38,7 @@ h1 {
   font-family: Arial-Black;
   /*line 19px (1.4) also from UX?*/
 }
+
 
 /*HEADER*/
 
@@ -44,10 +55,11 @@ nav ul{
   padding: 0;
 }
 
-/*nav bar*/
 nav ul li {
+  color: #757575;
+  font-family: Arial-BoldMT;
+  font-size: 14px;
   margin: 4%;
-  /*line: 16px (not sure wat );*/
 }
 
 /*push profile link further right*/
@@ -62,7 +74,6 @@ nav ul li a{
 }
 
 /*FORMS*/
-
 form {
   background-color: #FFFFFF;
   color: #9B9B9B;
@@ -80,9 +91,6 @@ form input {
 }
 
 /*SEARCH BARS*/
-h3{
-  color: #FFFFFF;
-}
 .search-bar {
   background-color: #FFFFFF;
   color:
@@ -191,7 +199,6 @@ h3{
 }
 
 
-
 /*FOOTER*/
 .footer-container {
   background-color: #616161;
@@ -211,3 +218,7 @@ h3{
 .social-media li {
   margin: 5%;
 }
+
+/*footer .col-md-4 {
+  margin-top: 10px;
+}*/

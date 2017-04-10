@@ -1,0 +1,46 @@
+	
+	.popUpModal{
+		background: #ffffff;
+		height: 75%;
+		max-height: 100%
+		width: 20%;
+		max-width: 100%;
+		position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		border-radius: 6px;
+  	}
+	
+	.popUpHeader p{
+		color: grey;
+		font-size: 15px;
+		padding: 4px;
+		background-color: red;
+		float: right;
+		margin-right: 5px;
+		max-width: 100%
+	}
+
+	.popUpHeader h2{
+		color: #00B7D1;
+		font-size: 36px;
+		font-family: Arial;
+		text-align: center;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		width:100%;
+	}
+
+	.modal-header{
+		margin-top: 0px !important;
+		padding-top: 0px !important;
+		border-bottom-width: 80% !important;
+	}
+
+	.popUpForm input, .popUpForm label, .popUpForm button{
+		display: flex;
+		align-items: center;
+		margin-left: 30%;
+		border-radius: 5px;
+	}

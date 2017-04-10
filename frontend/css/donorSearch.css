@@ -1,0 +1,43 @@
+
+.main-container {
+  margin: 0 auto;
+}
+h3{
+  color: #FFFFFF;
+  font-family: Arial-Black;
+  font-size: 24px;
+  margin-top: 100px;
+}
+
+.group-btns {
+  background-color : #FFFFFF;
+  padding: 20px;
+  width: 90%;
+}
+.group-btns img {
+  float: right;
+}
+.selectit {
+  background-color: #80B773;
+ }
+
+.btn {
+  padding-right: 20px;
+}
+/*.container .group-btns .active {
+   background-color : #9DD3E0;
+ }*/
+
+.center {
+  margin: 0 auto;
+  width: 50%;
+}
+.partners {
+  background-color: #9DD3E0;
+  margin-top: 200px;
+  padding: 20px;
+}
+.partners ul li {
+  display: inline-block;
+  padding-right: 20px;
+}
