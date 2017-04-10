@@ -8,20 +8,33 @@ $(document).ready(function(){
 	$('.dropButton').hide();
 
 	$('#sign-in').click(function(){
-		$('#loginPopup').modal('show')
+		$('#logInPopup').modal('show')
+	});
+
+	$('#sign-up').click(function(){
+		$('#signUpPopup').modal('show')
 	});
 
 		// there will be more to this when ajax call introduced
+
+	$('.logIn').click(function(e){
+		e.preventDefault();
+		$('#logInPopup').modal('hide');
+		$('#sign-in').hide();
+		$('.dropButton').show();
+	});
+
 	$('#signUp').click(function(e){
 		e.preventDefault();
-		$('#loginPopup').modal('hide');
+		$('#signUpPopup').modal('hide');
 		$('#sign-in').hide();
 		$('.dropButton').show();
 	});
 
 	$('.close').click(function(e){
 		e.preventDefault();
-		$('#loginPopup').modal('hide');
+		$('#signUpPopup').modal('hide');
+		$('#logInPopup').modal('hide');
 	});
 
 
