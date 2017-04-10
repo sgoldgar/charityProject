@@ -78,16 +78,20 @@
           <div class="col-md-8 col-sm-12 col-xs-12">
             <h2 class="inner-title">Profile</h2>
             <section class="inner-content">
-              <form action="profile" method="post" data-toggle="validator">
+              <form class="profile-edit" action="profile" method="post" data-toggle="validator">
 
+                <input type="file" name="pic" accept="image/*">
+
+                <!-- Organization Name -->
                 <div>
                   <label for="orgName">Organization Name</label><br>
                   <input type="text" id="orgName" required>
                 </div>
 
+                <!-- Organization address -->
                 <div>
                   <label for="orgAddress">Organization Address</label><br>
-                  <input type="text" id="orgAddress" required=""><br><br>
+                  <input type="text" id="orgAddress" required><br><br>
                   <input type="text" id="city" placeholder="City" required>
                   <select id="states">
                     <option>State</option>
@@ -148,33 +152,40 @@
                   <input type="text" id="hours" name="hours">
                 </div>
 
+
+                <!-- Text box for company bio -->
                 <div>
                   <label for="bio">Company Bio</label><br>
                   <textarea name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
                 </div>
 
+                <!-- Email and Profile admin -->
                 <div>
                   <label for="manager">Profile Manager</label><br>
                   <input type="text" name="manager"><br>
                   <label for="email">Email Address</label><br>
-                  <input type="text" name="email" required>
+                  <input type="email" name="email" required>
                 </div>
 
+                <!-- Update Password -->
                 <div>
                   <label for="password">Password</label><br>
                   <input type="password" name="oldPass" placeholder="Old Password" required><br>
                   <br>
-                  <input type="password" name="newpass" placeholder="New Password" required><br>
+                  <input type="password" name="newPass" placeholder="New Password" required><br>
                   <br>
-                  <input type="password" name="confirmPass" placeholder="Comfirm New Password" required>
+                  <input type="password" name="confirmPass" placeholder="Confirm New Password" required>
                 </div>
 
-                <button type="Submit" name="saveChanges">Save Changes</button>
+                <br><br>
+
+                <button class="button" type="Submit" name="saveChanges">Save Changes</button>
               </form>
             </section>
           </div>
         </div>
 
+  
       </div>
     </main>
 
