@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/charityProfile.css">
   </head>
 
   <body>
@@ -79,35 +80,41 @@
           </div>
           <!-- main content, changes based on where you navigate -->
           <div class="col-md-8 col-sm-12 col-xs-12">
-            <!-- Back arrow navigation -->
-            <p><img src="assets/back arrow-18.png" alt="back arrow">Back to Search</p>
-            <!-- Charity name -->
-            <h3 class="inner-title">Open Door at University UMC</h3>
 
             <section class="inner-content">
 
               <!-- Charity information -->
               <div class="row profile-info">
+
+                <!-- Back arrow navigation -->
+                <p class="back"><img class="icon" src="assets/back arrow-18.png" alt="back arrow">Back to Search</p>
+                <!-- Charity name -->
+                <h3 class="inner-title">Open Door at University UMC</h3>
+
                 <!-- charity logo -->
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                  <img class="charity-logo" src="assets/logo_UUMC rectangle.svg" alt="UUMC logo">
+                  <img class="charity-logo" src="assets/UUMC-Square-Logo.svg" alt="UUMC logo">
                 </div>
                 <!-- charity contact information -->
                   <div class="col-md-4 col-sm-4 col-xs-4">
-                    <p>Hours:</p>
-                    <p>M-F, 6:00am -6:00pm <br>
-                    Sa, 10:00am-6:00pm</p>
-                    <p>Address:</p>
-                    <p>2409 Guadalupe St., <br>
-                    Austin, TX 78705</p>
-                    <img src="assets/phone icon-19.png" alt="phone icon"><a href="tel:512-476-9387">(512) 478-9387</a>
+                    <div class="hours">
+                      <p>Hours:</p>
+                      <p>M-F, 6:00am -6:00pm <br>
+                      Sa, 10:00am-6:00pm</p>
+                    </div>
+                    <div class="address">
+                      <p>Address:</p>
+                      <p>2409 Guadalupe St., <br>
+                      Austin, TX 78705</p>
+                    </div>
+                    <img class="icon" src="assets/phone icon-19.png" alt="phone icon"><a href="tel:512-476-9387">(512) 478-9387</a>
                   </div>
                 <!-- charity map  -->
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <!-- link to google maps ajax call -->
-                    <img src="#" alt="google map">
+                    <img class="inset-map" src="#" alt="google map">
                     <button class="contact-button">
-                      <img src="assets/Mail Icon-14.png" alt="email icon"> Contact Us
+                      <img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"> Contact Us
                     </button>
                   </div>
               </div>
@@ -115,15 +122,19 @@
               <!-- Charity about section -->
               <div class="row about-info">
                 <h4>About Us</h4>
-                <img src="#" alt="picture of UUMC">
-                <p>At University UMC, we feed 200+ meals weekly to those in need, as well provide used clothing as toiletries. This ministry is possible because of volunteer help</p>
+                <div>
+                  <img class="charity-image" src="assets/About us content photo.png" alt="picture of UUMC">
+                  <p>At University UMC, we feed 200+ meals weekly to those in need, as well provide used clothing as toiletries. This ministry is possible because of volunteer help</p>
+                </div>
               </div>
 
               <!-- Charity donations needed section/generated in ajax call?-->
               <div class="row donations-needed">
-                <h4>Winter weather provisions needed</h4>
-                <!-- date generated in jquery? -->
-                <p>04/06/2017</p>
+                <div>
+                  <h4>Winter weather provisions needed</h4>
+                  <!-- date generated in jquery? -->
+                  <p class="date">04/06/2017</p>
+                </div>
                 <!--list generated from ajax call? -->
                 <ul>
                   <li>Non-perishable food</li>
@@ -136,10 +147,11 @@
 
               <!-- Charity donations needed section -->
               <div class="row donations-needed">
-                <h4>Ongoing lunch donations</h4>
-                <!-- date generated in jquery? -->
-                <p>Recurring</p>
-                <!--list generated from ajax call? -->
+                <div>
+                  <h4>Ongoing lunch donations</h4>
+                  <!-- date generated in jquery? -->
+                  <p class="date">Recurring</p>
+                </div>
                 <ul>
                   <li>Tomato juice</li>
                   <li>Bread</li>

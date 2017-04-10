@@ -38,7 +38,7 @@ nav ul li, .social-media li {
 
 
 /*for all the buttons on the pages*/
-.button {
+.button, .contact-button {
   background-color: #80B773;
   color: white;
   border-radius: 100px;
