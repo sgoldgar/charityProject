@@ -35,9 +35,9 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dLabel">
-                      <li><a href="#">One Thing</a></li>
-                      <li><a href="#">Two Thing</a></li>
-                      <li><a href="#">Three Thing</a></li>
+                      <li><a href="profileEdit.html">Public Profile</a></li>
+                      <li><a href="donationHistory.html">Donations</a></li>
+                      <li><a href="messages.html">Messages</a></li>
                     </ul>
                 </div>
                 </li>
@@ -78,7 +78,7 @@
           <!-- donor signup -->
           <div class="col-md-3 home-match-button">
             <!-- donor clickable link/button -->
-            <a href="#">
+            <a href="donorSearch.html">
               <div>
                 <h4>I am a Donor</h4>
                 <p>What do you care about? We are a source to connect
@@ -87,7 +87,7 @@
             </a>
           </div>
           <!-- charity signup -->
-          <div class="col-md-3 home-match-button">
+          <div class="col-md-3 home-match-button" id="sign-up">
             <!-- charity clickable link/button -->
             <a href="#">
               <div>
@@ -107,7 +107,7 @@
 
 
     <!-- This is the footer. It's the same on every page. -->
-    <footer>
+    <footer class="navbar-fixed-bottom">
       <div class="container footer-container">
         <div class="row">
 <!-- Column one three links in a ul. -->
@@ -135,8 +135,41 @@
       </div>
     </footer>
 
-    <!-- lightbox popup from sign-in -->
-        <div class="modal fade popUpModal container" id="loginPopup" role="dialog">
+    <!-- sign in lightbox -->
+    <!-- THIS IS A PLACEHOLDER FOR AUTH0 AUTH -->
+      <div class="modal fade popUpModal container" id="logInPopup" role="dialog">
+          <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+                <h2 class="popUp">Sign In</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-body popUpForm col-xs-8 col-md-6">
+                <form>
+                <label>Username (email)</label>
+                <input type="text" name="email">
+                <label>Password</label>
+                <input type="text" name="password">
+                <button class="logIn" type="submit" name="logIn">Log In</button>
+                </form>
+              </div>
+              <div class="modal-footer popUpFooter col-xs-8 col-md-6">
+                <a href="#" class="logIn">
+                  <img src="assets/GooglePlusLogin.svg" alt="Log In With Google">
+                </a>
+                <a href="#" class="logIn">
+                  <img src="assets/facebook-login.png" alt="Log In With Facebook">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+
+    <!-- lightbox popup from charity sign up -->
+        <div class="modal fade popUpModal container" id="signUpPopup" role="dialog">
           <div class="modal-dialog">
           <div class="row">
               <div class="modal-header popUpHeader col-xs-8 col-md-6">
@@ -165,7 +198,6 @@
             </div>
           </div>
         </div>
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
