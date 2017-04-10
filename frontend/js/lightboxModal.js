@@ -22,6 +22,7 @@ $(document).ready(function(){
 		$('#logInPopup').modal('hide');
 		$('#sign-in').hide();
 		$('.dropButton').show();
+		window.location.href='donationHistory.html';
 	});
 
 	$('#signUp').click(function(e){
@@ -29,6 +30,7 @@ $(document).ready(function(){
 		$('#signUpPopup').modal('hide');
 		$('#sign-in').hide();
 		$('.dropButton').show();
+		window.location.href='profileEdit.html';
 	});
 
 	$('.close').click(function(e){
