@@ -58,7 +58,7 @@ $('.group-btns .btn').on('click',function(event){
 
 function findneeds(needs){
 
-  var url = 'http://localhost.com/charityportal/needs';
+  var url = 'http://localhost:3000/charityportal/needs';
 
   console.log('inside findneeds');
 
@@ -68,9 +68,9 @@ function findneeds(needs){
 
   var patching = $.ajax({
     url:url,
-    type:"GET",
-    data:data
-  });
+    type:"POST",
+    data: data
+  }, console.log("needs data object", data.needs[0]));
 
   patching.done(function(response){
     console.log("findneedsYATA ", response);

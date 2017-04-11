@@ -10,7 +10,7 @@ var charitySchema = new mongoose.Schema({
 	website: {type: String, required:false},
 	address: {type: String, required: false},
 	hours: {type: String, required: false},
-	needs: []
+	needs : { type : Array , "default" : [], required:false }
 });
 
 var charity = mongoose.model('charitySchema', charitySchema);
