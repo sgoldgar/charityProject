@@ -55,7 +55,6 @@ $('.group-btns .btn').on('click',function(event){
 
 
 
-
 function findneeds(needs){
 
   var url = 'http://localhost:3000/charityportal/needs';
@@ -81,74 +80,16 @@ function findneeds(needs){
 
 
 
-
-
 // submitting button search parameters
-$(".submitSearch").on('click', function(event){
-  event.preventDefault();
+$(".submitSearch").on('click', function(){
+  // event.preventDefault();
   var needSearch = [] ;
   $.each($(".selectit"), function(){
         needSearch.push($(this).text());
+
     });
+
     console.log('needSearch ', needSearch);
     findneeds(needSearch);
   });
   
-
-// // ajax call to database based on needs selected
-//   function getNeedsData(needSearch) {
-//     var getNeeds = $.ajax({
-//     url: databaseUrl,
-//     data: needSearch
-//   })
-//
-//
-//   getNeeds.done(function(response) {
-//     $(this ).addClass( "done" );
-//     // flag=response.sys.country;
-//     // flagPic=flag.toLowercase();
-//
-//       console.log(city, temperature, humidity, flag)
-//
-//       //put API response into the DOM
-//       // $('.search-results').find('.results-city').text(city).append('<img src="'+iconUrl+'"/>');
-//       // $('.temperature-container .temperature').text(temperature + ' F');
-//       // $('.humidity-container .humidity').text(humidity);
-//       // $('.results').find('.flag-icon').prepend('<span>"flag-icon-'+ flagPic'(</span>');
-//
-//
-//     });
-//
-//     getNeeds.fail(function(error){
-//       alert('error!', error),
-//
-//     });
-//
-//     getNeeds.always(function(){
-//
-//     });
-//
-//
-//   }
-//   //setting event handlers
-//   function setHandlers(){        //
-//     $('.submitSearch').on('submit', function(event){
-//       event.preventDefault(); //prevent default of submitting  first pull value of buttons
-//
-//     getNeedsData(needSearch);//call function
-//     });
-//
-//   }
-//
-//   function main() {
-//     //what do we want when it loads? default city w
-//     getNeedData('needSearch');
-//     setHandlers();
-//
-//   }
-//   /*flow of our webapp*/
-//   main();
-//
-//   });
-// };
-// });
