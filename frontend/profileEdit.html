@@ -89,23 +89,36 @@
                 <!-- upload custom profile image -->
                 <!-- <input type="file" name="pic" accept="image/*"> -->
                 <label class="custom-file">
-                  <input type="file" id="file" class="custom-file-input">
+                  <input type="file" id="file" class="custom-file-input" name="image">
                   <span class="custom-file-control"></span>
                 </label>
 
 
                 <!-- Organization Name -->
                 <div>
-                  <label for="orgName">Organization Name</label><br>
-                  <input type="text" id="orgName" required>
+
+                  <label for="charityName">Organization Name</label><br>
+                  <input type="text" id="orgName" name="charityName" required>
+                  <label>What do you need?</label>
+                  <select name="needs">
+                    <option selected>Needs</option>
+                    <option value="householdGoods">Household Goods</option>
+                    <option value="money">Money</option>
+                    <option value="dryGoods">Dry Goods</option>
+                    <option value="volunteer">Volunteer Time</option>
+                    <option value="meals">Meals</option>
+                  </select>
+
                 </div>
 
                 <!-- Organization address -->
                 <div>
-                  <label for="orgAddress">Organization Address</label><br>
-                  <input type="text" id="orgAddress" required><br><br>
-                  <input type="text" id="city" placeholder="City" required>
-                  <select id="states">
+
+                  <label for="streetAddress">Organization Address</label><br>
+                  <input type="text" id="orgAddress" name="streetAddress"required><br><br>
+                  <input type="text" id="city" name="city" placeholder="City" required>
+
+                  <select id="states" name="state">
                     <option selected>State</option>
                   	<option value="AL">Alabama</option>
                   	<option value="AK">Alaska</option>
@@ -159,9 +172,15 @@
                   	<option value="WI">Wisconsin</option>
                   	<option value="WY">Wyoming</option>
                   </select>
-                  <input type="text" id="zip" placeholder="Zip Code" required><br>
+
+
+                  <input type="text" id="zip" placeholder="Zip Code" name="zip" required><br>
+                  <label for="phoneNumber">Phone Number</label>
                   <label for="hours">Hours of Operation</label><br>
+
                   <input type="text" id="hours" name="hours">
+                  <label for="website">Company Website</label>
+                  <input type="text" id="website" name="website">
                 </div>
 
 
@@ -173,21 +192,21 @@
 
                 <!-- Email and Profile admin -->
                 <div>
-                  <label for="manager">Profile Manager</label><br>
-                  <input type="text" name="manager"><br>
+                  <label for="profileManager">Profile Manager</label><br>
+                  <input type="text" name="profileManager"><br>
                   <label for="email">Email Address</label><br>
                   <input type="email" name="email" required>
                 </div>
 
                 <!-- Update Password -->
-                <div>
+                <!-- <div>
                   <label for="password">Password</label><br>
                   <input type="password" name="oldPass" placeholder="Old Password" required><br>
                   <br>
                   <input type="password" name="newPass" placeholder="New Password" required><br>
                   <br>
                   <input type="password" name="confirmPass" placeholder="Confirm New Password" required>
-                </div>
+                </div> -->
 
                 <br><br>
 
@@ -246,7 +265,7 @@
                 <form>
                 <label>What do you need?</label>
                 <select>
-                  <option selected>Needs</option>
+                  <option selected>---</option>
                   <option value="householdGoods">Household Goods</option>
                   <option value="money">Money</option>
                   <option value="dryGoods">Dry Goods</option>
