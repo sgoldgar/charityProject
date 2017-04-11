@@ -45,6 +45,7 @@ nav ul li, .social-media li {
   /*border 1px inside (margin? from UX)*/
   font-size: 14px;
   font-family: Arial-Black;
+  border: none;
   /*line 19px (1.4) also from UX?*/
 }
 
@@ -113,7 +114,7 @@ form input {
   padding-top: 10px;
 }
 
-.join { 
+.join {
   text-decoration: underline;
  }
 
