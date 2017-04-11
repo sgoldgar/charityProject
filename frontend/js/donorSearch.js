@@ -64,12 +64,14 @@ $(".submitSearch").on('click', function(){
     console.log(needSearch);
   });
 
-// // ajax call to database based on needs selected
-//   function getNeedsData(needSearch) {
-//     var getNeeds = $.ajax({
-//     url: databaseUrl,
-//     data: needSearch
-//   })
+// ajax call to database based on needs selected
+  function getNeedsData(needSearch) {
+    var getNeeds = $.ajax({
+    url: databaseUrl,
+    data: needSearch
+  });
+  console.log(getNeedsData());
+};
 //
 //
 //   getNeeds.done(function(response) {
@@ -88,36 +90,3 @@ $(".submitSearch").on('click', function(){
 //
 //     });
 //
-//     getNeeds.fail(function(error){
-//       alert('error!', error),
-//
-//     });
-//
-//     getNeeds.always(function(){
-//
-//     });
-//
-//
-//   }
-//   //setting event handlers
-//   function setHandlers(){        //
-//     $('.submitSearch').on('submit', function(event){
-//       event.preventDefault(); //prevent default of submitting  first pull value of buttons
-//
-//     getNeedsData(needSearch);//call function
-//     });
-//
-//   }
-//
-//   function main() {
-//     //what do we want when it loads? default city w
-//     getNeedData('needSearch');
-//     setHandlers();
-//
-//   }
-//   /*flow of our webapp*/
-//   main();
-//
-//   });
-// };
-// });
