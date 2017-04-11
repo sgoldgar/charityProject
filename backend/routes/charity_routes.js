@@ -7,54 +7,30 @@ var charityconn = require('../db/charity_db'),
 var router = express.Router();
 
 
+router.get('/needs', function(req, res, next) {
+
+  var returnarrayobject = [];
+  var dumcount = 0;
+
+  //I THINK that the forEach function behaves synchronously but in the case that it doesnt the below dumcount
+  //will not behave as expected.
 
 
-
-router.post('/',function(req,res,next){
-  var newCharity = new charity_model({
-    name: req.body.name
-  });
-
-  newCharity.save(function(err, post){
-    if(err){
-      res.status(500).send({
-        status: "Error", 
-        error: err
+  req.needs.forEach(function(reqneed){
+    charity_model.forEach(function(post){
+      
+      dumcount = 0;
+      post.needs.forEach(function(postneed){
+        if (postneed===reqneed && dumcount != 0){
+          returnarrayobject.push(post);
+          dumcount = 1;
+        }
       });
-    }else{
-      res.status(200).json({
-        status: "ok",
-        post: post
-      //res.redirect('/');
-      });
-    }
-  });
-});
 
-
-
-router.delete('/',function(req,res,next){
-  charity_model.remove({},function(err,post){
-    if (err) console.log(err);
-
-    res.json({
-      status: "deleted!",
-      post: post  
     });
   });
-});
 
-
-
-
-router.get('/', function(req, res, next) {
-
-  charity_model.find({},function(err,posts){
-    if(err) console.log(err);
-
-   res.json(posts);
-
-  });
+  res.json(returnarrayobject);
 
 });
 
