@@ -19,6 +19,10 @@ $(document).ready(function(){
 		$('#joinUpPopup').modal('show');
 	});
 
+	$('#contactUs').click(function(){
+		$('#contactPopup').modal('show');
+	});
+
 		// there will be more to this when ajax call introduced
 
 	$('.logIn').click(function(e){
@@ -50,6 +54,7 @@ $(document).ready(function(){
 		$('#signUpPopup').modal('hide');
 		$('#logInPopup').modal('hide');
 		$('#joinUpPopup').modal('hide');
+		$('#contactPopup').modal('hide');
 	});
 
 
