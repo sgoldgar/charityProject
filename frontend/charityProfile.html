@@ -8,6 +8,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/charityProfile.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
   </head>
 
   <body>
@@ -54,17 +55,19 @@
 
             </div>
             <ul class="profile-sidebar">
-              <!-- search link -->
+
+              <!-- donor search -->
               <li class="selected-link">
-                <a href="#">Search</a>
+                <a href="donorProfile.html">Search</a>
               </li>
               <!-- donations link -->
               <li>
-                <a href="#">Donations</a>
+                <a href="donationHistory.html">Donations</a>
+
               </li>
               <!-- messages link -->
               <li>
-                <a href="#">Messages</a>
+                <a href="messages.html">Messages</a>
               </li>
               <!-- notifications link -->
               <li>
@@ -74,6 +77,14 @@
               <li>
                 <a href="#">Event Calendar</a>
               </li>
+
+              <!-- donation request button -->
+              <li>
+                <!-- <button class="donation-button button">
+                  <span class="plus-sign">+</span><br> Donation<br> Request
+                </button> -->
+              </li>
+
             </ul>
           </div>
           <!-- main content, changes based on where you navigate -->
@@ -111,7 +122,7 @@
                   <div class="col-md-4 col-sm-4 col-xs-4">
                     <!-- link to google maps ajax call -->
                     <img class="inset-map" src="#" alt="google map">
-                    <button class="contact-button">
+                    <button class="contact-button" id="contactUs">
                       <img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"> Contact Us
                     </button>
                   </div>
@@ -196,11 +207,35 @@
         </div>
       </div>
     </footer>
+      
+      <!-- contact us modal -->
+     <div class="modal fade popUpModal container" id="contactPopup" role="dialog">
+        <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+                <h2 class="popUp">Contact Us</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-body popUpForm col-xs-8 col-md-6">
+                <form>
+                <label>Username (email)</label>
+                <input type="text" name="email">
+                <label>What can we do for you?</label>
+                <textarea name="contactText" rows="15" cols="50"></textarea>
+                <button class="contact" type="submit" name="contact-us">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
     <!-- SCRIPTS -->
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/lightboxModal.js"></script>
   </body>
 </html>
