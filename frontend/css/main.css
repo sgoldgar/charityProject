@@ -45,6 +45,7 @@ nav ul li, .social-media li {
   /*border 1px inside (margin? from UX)*/
   font-size: 14px;
   font-family: Arial-Black;
+  border: none;
   /*line 19px (1.4) also from UX?*/
 }
 
@@ -105,7 +106,7 @@ form input {
   color: #ffffff;
   font-size: 18px;
   font-family: Arial;
-  width: 100%;
+  min-width: 100%;
   max-width: 100%;
   margin: 0;
   text-align: center;
@@ -113,10 +114,14 @@ form input {
   padding-top: 10px;
 }
 
-.join { 
+.join {
   text-decoration: underline;
  }
 
+/*TEXT ON SEARCH PAGES*/
+.searchHeadText{
+  margin-top: 50px;
+}
 
 /*PROFILE SIDEBAR*/
 .greetings {
@@ -188,9 +193,7 @@ form input {
   margin-left: 25%;
 }
 
-.profile-edit {
-  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
-}
+
 /*Donation History Table*/
 .historyTable{
   border: none;

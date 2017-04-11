@@ -93,3 +93,30 @@
 	.modal-body form p {
 		margin: 5% 53%;
 	}
+
+	/*DONATIONS*/
+	#donatePopup .modal-body label, #donatePopup .modal-body input {
+		float: left;
+		margin-left: 10%;
+		margin-bottom: 2%;
+	}
+
+	#donatePopup .modal-body select {
+		width: 100%;
+		margin-left: 8%;
+		margin-bottom: 3%;
+	}
+
+	#donatePopup .modal-body input {
+		padding-left: 50%;
+	}
+
+	#donatePopup .form-check label {
+		width: 100%;
+		margin-top: 6%;
+	}
+
+	#donatePopup textarea {
+		max-width: 100%;
+		margin-left: 10%;
+	}
