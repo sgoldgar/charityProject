@@ -6,6 +6,9 @@ $(function(){
 		
 		var url = 'http://localhost:3000/login/';
 
+		console.log('username', username);
+		console.log('password', password);
+
 		var data = {
 				username: username,
 				password: password
@@ -22,28 +25,54 @@ $(function(){
 			if (response.goto==="passwordsdontmatch"){
 				alert("password or username is not correct");
 			}else{
-				//what page do i redirect to here?
+				if (response.goto==='charityportal'){
+					window.location.href = 'http://localhost:5000/charityProfile.html';
+				}else if (response.goto===''){
+					window.location.href = 'http://localhost:5000/donorProfile.html';
+				}
 			}
 		});
 
 	}
 
 
+
+
+// var mongoose = require('mongoose');
+
+// var charitySchema = new mongoose.Schema({
+// 	charityName: { type: String, required: false },
+// 	bio: { type: Array, required: false},
+// 	phoneNumber: { type: String, required: false},
+// 	profileManager: {type: String, required: false},
+// 	img: {type: String, required: false},
+// 	website: {type: String, required:false},
+// 	streetAddress: {type: String, required: false},
+// 	city: {type: String, required: false},
+// 	state: {type: String, required: false},
+// 	zip: {type: String, required: false},
+// 	hours: {type: String, required: false},
+// 	needs : { type : Array , "default" : [], required:false }
+// });
+
+// var charity = mongoose.model('charitySchema', charitySchema);
+
+// module.exports = charity;
+
+
     function pushcharityinfo(){
     	var url = 'http://localhost:3000/login/signup/charitypost';
 
-    	//var username = $(".charityemail").val();
-    	//var password = $(".charitypassword").val();
-    	//var def = $.Deferred();
-
     	var name = $(".charityorginizationname").val();
     	var address = $(".charityaddress").val();
+    	var organizationname = $(".charityorginizationname").val();
 
     	console.log(" name ", name, " address ", address);
 
     	var data2 = {
-    		name: name,
-    		address: address
+    		//bio: name,
+    		streetAddress: address,
+    		charityName: organizationname
     	};
 
     	var pushcharity = $.ajax({
@@ -55,6 +84,7 @@ $(function(){
 
     	pushcharity.done(function(response){
     		console.log("charitypatchYATA ", response);
+    		window.location.href = 'http://localhost:5000/charityProfile.html'
     	});
     }
 
