@@ -22,7 +22,7 @@ $('.group-btns .btn').on('click',function(event){
       self.removeClass('selectit');
       self.addClass('btn-primary');
     }
-  	else
+    else
     {
       self.addClass('selectit');
       self.removeClass('btn-primary');
@@ -53,6 +53,33 @@ $('.group-btns .btn').on('click',function(event){
   }
 });
 
+
+
+function findneeds(needs){
+
+  var url = 'http://localhost:3000/charityportal/needs';
+
+  console.log('inside findneeds');
+
+  data = {
+    needs: needs
+  };
+
+  var patching = $.ajax({
+    url:url,
+    type:"POST",
+    data: data
+  }, console.log("needs data object", data.needs[0]));
+
+  patching.done(function(response){
+    console.log("findneedsYATA ", response);
+  });
+
+
+}
+
+
+
 // submitting button search parameters
 $(".submitSearch").on('click', function(){
   // event.preventDefault();
@@ -64,8 +91,14 @@ $(".submitSearch").on('click', function(){
     });
 
 
+<<<<<<< HEAD
     findNeeds(needSearch);
+=======
+    console.log('needSearch ', needSearch);
+    findneeds(needSearch);
+>>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
   });
+  
 
 // ajax call to database based on needs selected
   function findNeeds(needs) {
@@ -106,3 +139,4 @@ $(".submitSearch").on('click', function(){
 //
 //     });
 //
+

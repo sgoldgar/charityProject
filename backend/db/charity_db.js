@@ -5,6 +5,18 @@ var mongoose = require('mongoose'),
 
 
 
+<<<<<<< HEAD
+=======
+//!ACHTUNG! THESE DB PASSWORDS ARE OUT IN THE WILD - HIDE IN PRODUCTION !ACHTUNG!
+//charity_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db1
+//donator_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db2
+//password_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db3
+
+
+
+
+
+>>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
 
 
 
