@@ -1,4 +1,9 @@
-
+	.close{
+		box-shadow: 2px 2px 2px grey;
+		background-color: gray;
+		border: 1px solid gray;
+		margin-right: 30%
+	}
 	.popUpModal{
 		background: #ffffff;
 		height: 75%;
