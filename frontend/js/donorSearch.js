@@ -3,7 +3,7 @@ console.log('all ready');
 
 $(function() {
     console.log( "test!");
-    var databaseUrl= 'http:localhost:3000/charity_portal';
+
 });
 
 $('.group-btns .btn').on('click',function(event){
@@ -59,19 +59,35 @@ $(".submitSearch").on('click', function(){
   var needSearch = [] ;
   $.each($(".selectit"), function(){
         needSearch.push($(this).text());
+        console.log('need search', needSearch)
 
     });
-    console.log(needSearch);
+
+
+    findNeeds(needSearch);
   });
 
 // ajax call to database based on needs selected
-  function getNeedsData(needSearch) {
-    var getNeeds = $.ajax({
-    url: databaseUrl,
-    data: needSearch
-  });
-  console.log(getNeedsData());
-};
+  function findNeeds(needs) {
+
+    var url= 'http:localhost:3000/charity_portal/needs';
+    console.log('inside findneeds');
+    data = {
+      needs: needs
+    };
+
+    var patching = $.ajax({
+      url: url,
+      type: "POST",
+      data: data
+    }, console.log('url', url));
+
+    patching.done(function(response){
+      console.log('find needs', response);
+    });
+
+
+  };
 //
 //
 //   getNeeds.done(function(response) {
