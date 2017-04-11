@@ -97,15 +97,15 @@
                 <!-- Organization Name -->
                 <div>
                   <label for="orgName">Organization Name</label><br>
-                  <input type="text" id="orgName" required>
+                  <input type="text" id="orgName" name="charityName" required>
                 </div>
 
                 <!-- Organization address -->
                 <div>
                   <label for="orgAddress">Organization Address</label><br>
-                  <input type="text" id="orgAddress" required><br><br>
-                  <input type="text" id="city" placeholder="City" required>
-                  <select id="states">
+                  <input type="text" id="orgAddress" name="streetAddress" required><br><br>
+                  <input type="text" id="city" placeholder="City" name="city" required>
+                  <select id="states" name="state">
                     <option selected>State</option>
                   	<option value="AL">Alabama</option>
                   	<option value="AK">Alaska</option>
@@ -159,7 +159,7 @@
                   	<option value="WI">Wisconsin</option>
                   	<option value="WY">Wyoming</option>
                   </select>
-                  <input type="text" id="zip" placeholder="Zip Code" required><br>
+                  <input type="text" id="zip" placeholder="Zip Code" name="zip" required><br>
                   <label for="hours">Hours of Operation</label><br>
                   <input type="text" id="hours" name="hours">
                 </div>
