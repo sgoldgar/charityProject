@@ -58,15 +58,19 @@ nav ul {
 }
 
 .home-match-button div {
-  width: 22vw;
-  height: 10vw;
+  min-height: 20vh;
 }
 
 .home-match-button h4{
   margin-top: 10%;
 }
 
+.home-match-button p{
+  padding-bottom: 5%;
+}
+
 .home-match-button h4, .home-match-button p{
   margin-left: 10%;
   padding-right: 20%;
+  width: 100%;
 }
