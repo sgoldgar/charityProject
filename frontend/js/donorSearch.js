@@ -3,7 +3,7 @@ console.log('all ready');
 
 $(function() {
     console.log( "test!");
-    var databaseUrl= 'http:localhost:3000/charity_portal';
+
 });
 
 $('.group-btns .btn').on('click',function(event){
@@ -86,38 +86,33 @@ $(".submitSearch").on('click', function(){
   var needSearch = [] ;
   $.each($(".selectit"), function(){
         needSearch.push($(this).text());
+        console.log('need search', needSearch)
 
     });
-
-
     console.log('needSearch ', needSearch);
     findneeds(needSearch);
+
   });
 
 
 // ajax call to database based on needs selected
-  function getNeedsData(needSearch) {
-    var getNeeds = $.ajax({
-    url: databaseUrl,
-    data: needSearch
-  });
-  console.log(getNeedsData());
-};
-//
-//
-//   getNeeds.done(function(response) {
-//     $(this ).addClass( "done" );
-//     // flag=response.sys.country;
-//     // flagPic=flag.toLowercase();
-//
-//       console.log(city, temperature, humidity, flag)
-//
-//       //put API response into the DOM
-//       // $('.search-results').find('.results-city').text(city).append('<img src="'+iconUrl+'"/>');
-//       // $('.temperature-container .temperature').text(temperature + ' F');
-//       // $('.humidity-container .humidity').text(humidity);
-//       // $('.results').find('.flag-icon').prepend('<span>"flag-icon-'+ flagPic'(</span>');
-//
-//
-//     });
-//
+  function findNeeds(needs) {
+
+    var url= 'http:localhost:3000/charity_portal/needs';
+    console.log('inside findneeds');
+    data = {
+      needs: needs
+    };
+
+    var patching = $.ajax({
+      url: url,
+      type: "POST",
+      data: data
+    }, console.log('url', url));
+
+    patching.done(function(response){
+      console.log('find needs', response);
+    });
+
+
+  };
