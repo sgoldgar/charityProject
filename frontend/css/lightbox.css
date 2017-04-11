@@ -1,4 +1,4 @@
-	
+
 	.popUpModal{
 		background: #ffffff;
 		height: 75%;
@@ -11,7 +11,7 @@
   		transform: translate(-50%, -50%);
   		border-radius: 6px;
   	}
-	
+
 	.popUpHeader p{
 		color: grey;
 		font-size: 15px;
@@ -43,4 +43,44 @@
 		align-items: center;
 		margin-left: 30%;
 		border-radius: 5px;
+	}
+
+/*Modal Styling*/
+	.modal-dialog{
+		margin: 1% 25%;
+	}
+
+	.modal {
+		max-width: 50%;
+	}
+
+	.modal button{
+		margin-top: 5%;
+    margin-left: 45%;
+	}
+
+	.modal-body label{
+		margin-bottom: 3%;
+	}
+
+	.modal-footer {
+		width: 100%;
+	}
+
+	.modal-footer img {
+		width: 30%;
+		margin-left: 18%;
+		display: inline;
+		float: left;
+	}
+
+	#logInPopup .modal-footer img {
+		width: 15%;
+		margin-left: 7%;
+		display: inline;
+		float: left;
+	}
+
+	.modal-body form p {
+		margin: 5% 53%;
 	}
