@@ -2,12 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 
-var charityconn = require('../db/charity_db'), 
+var charityconn = require('../db/charity_db'),
   charity_model = charityconn.model('charitySchema');
 
 router.post('/needs', function(req, res, next) {
 
   console.log('inside charity needs');
+  console.log(req.body.needs);
+  console.log(req.body['needs[]']);
 
   var returnarrayobject = [];
   var dumcount = 0;
@@ -17,10 +19,10 @@ router.post('/needs', function(req, res, next) {
   reqneedsarray.push(reqneedsstring);
 
   console.log('req.body.needs ', req.body.needs);
-  console.log('req.needs ', req.needs);
+  // console.log('req.needs ', req.body.needs);
   console.log('req.body ', req.body);
   console.log('req.body.needs[]', req.body["needs[]"]);
-  console.log('reqneedsstring', reqneedsstring);  
+  console.log('reqneedsstring', reqneedsstring);
   console.log('reqneedsarray[0]', reqneedsarray[0]);
 
   var loopcounter = 0;
@@ -51,7 +53,7 @@ router.post('/needs', function(req, res, next) {
             }
           }
         }
-        
+
         if (looplength === loopcounter){
           result(true);
         }
@@ -63,7 +65,7 @@ router.post('/needs', function(req, res, next) {
   });
 
   promise.then(function(resolve){
-    if (resolve){    
+    if (resolve){
       console.log("returncharities ", returncharities);
       res.json(returncharities);
     }

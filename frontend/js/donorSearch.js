@@ -93,7 +93,7 @@ $(".submitSearch").on('click', function(){
     console.log('needSearch ', needSearch);
     findneeds(needSearch);
   });
-  
+
 
 // ajax call to database based on needs selected
   function getNeedsData(needSearch) {
@@ -121,4 +121,3 @@ $(".submitSearch").on('click', function(){
 //
 //     });
 //
-
