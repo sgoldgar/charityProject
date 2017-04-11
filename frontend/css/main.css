@@ -192,9 +192,7 @@ form input {
   margin-left: 25%;
 }
 
-.profile-edit {
-  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
-}
+
 /*Donation History Table*/
 .historyTable{
   border: none;
