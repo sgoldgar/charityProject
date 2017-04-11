@@ -5,6 +5,10 @@ var passwordconn = require('../db/password_db'),
   password_model = passwordconn.model('passwordSchema');
 
 
+var charityconn = require('../db/charity_db'), 
+  charity_model = charityconn.model('charitySchema');
+
+
 var bcryptaspromised = require('bcrypt-as-promised');
 const saltRounds = 10;
 
@@ -40,6 +44,55 @@ function postPass(hashedpass, sendusername, sendtype, res){
 
 
 }
+
+
+// var mongoose = require('mongoose');
+
+// var charitySchema = new mongoose.Schema({
+// 	name: { type: String, required: true },
+// 	description: { type: Array, required: false},
+// 	number: { type: String, required: false},
+// 	img: {type: String, required: false},
+// 	website: {type: String, required:false},
+// 	address: {type: String, required: false},
+// 	hours: {type: String, required: false},
+// 	needs: []
+// });
+
+// var charity = mongoose.model('charitySchema', charitySchema);
+
+// module.exports = charity;
+
+
+
+
+router.post("/signup/charitypost", function(req,res,next){
+
+	console.log('made it inside charitypost');
+	//console.log('req ', req);
+	console.log('req.body.name ', req.body.name, ' req.body.address ', req.body.address);
+	console.log('req.name ', req.name, " req.name ", req.name);
+
+	var newCharity = new charity_model({
+		name: req.body.name,
+		address: req.body.address
+	});
+
+  newCharity.save(function(err, post){
+    if(err){
+      console.log("shiterror: ", err);
+      res.status(500).send({
+        status: "Error", 
+        error: err
+      });
+    }else{
+      res.status(200).json({
+        status: "ok",
+        post: post
+      });
+    }
+  });
+});
 
 
 
@@ -95,6 +148,9 @@ router.post('/', function(req,res,next){
 		password_model.find({}, function(err,posts){
 			postslength = posts.length;
 			posts.forEach(function(post){
+
+				//console.log("post ", post);
+				//console.log("req.body.username ", req.body.username, " req.body.password ", req.body.password);
 
 				if (post.username == req.body.username){
 					bcryptaspromised.compare(req.body.password, post.password)

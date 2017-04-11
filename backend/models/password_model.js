@@ -8,4 +8,6 @@ var passwordSchema = new mongoose.Schema({
 	type: { type: String, required: true }
 });
 
-mongoose.model('passwordSchema', passwordSchema);
+var password = mongoose.model('passwordSchema', passwordSchema);
+
+module.exports = password;
