@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profileEdit.css">
+    <link rel="stylesheet" href="css/lightbox.css">
   </head>
 
   <body>
@@ -16,7 +18,7 @@
         <div class="row header-row">
 <!-- This is where the logo will go and it links back to home page. -->
           <div class="col-xs-4 col-md-4">
-            <a href="#"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
+            <a href="homepage.html"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
           </div>
 <!-- This is the nav bar.  Needs to be static and jump scroll. -->
           <div class="col-xs-8 col-md-8">
@@ -40,15 +42,19 @@
         <div class="row main-row">
           <!-- left side bar, doesn't change -->
           <div class="col-md-4 col-sm-12 col-xs-12 ">
-            <ul class="profile-sidebar">
-              <!-- main greeting -->
-              <li class="greetings">
-                <!-- name will be generated from ajax call and add an exclamation point, add id on jquery-->
-                <p>Greetings
-                <span class="greeting-name">NAME</span></p>
+            <!-- main greeting -->
+            <div class="greetings">
+              <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
+              <div class="greeting-container">
+                <h2>Greetings <br><span>NAME!</span></h2>
+              </div>
+              <div class="greeting-image-container">
+                <img src="assets/Profile-Icon.svg" alt="profile-picture">
+              </div>
+           </div>
 
-                <img src="assets/profile-icon.svg" alt="profile-picture">
-              </li>
+            <ul class="profile-sidebar">
+
 
               <!-- donations link -->
               <li>
@@ -68,7 +74,7 @@
               </li>
               <!-- donation request button -->
               <li>
-                <button class="donation-button button">
+                <button class="donation-button button" id="donate">
                   <span class="plus-sign">+</span> Donation Request
                 </button>
               </li>
@@ -80,7 +86,13 @@
             <section class="inner-content">
               <form class="profile-edit" action="profile" method="post" data-toggle="validator">
 
-                <input type="file" name="pic" accept="image/*">
+                <!-- upload custom profile image -->
+                <!-- <input type="file" name="pic" accept="image/*"> -->
+                <label class="custom-file">
+                  <input type="file" id="file" class="custom-file-input">
+                  <span class="custom-file-control"></span>
+                </label>
+
 
                 <!-- Organization Name -->
                 <div>
@@ -94,7 +106,7 @@
                   <input type="text" id="orgAddress" required><br><br>
                   <input type="text" id="city" placeholder="City" required>
                   <select id="states">
-                    <option>State</option>
+                    <option selected>State</option>
                   	<option value="AL">Alabama</option>
                   	<option value="AK">Alaska</option>
                   	<option value="AZ">Arizona</option>
@@ -185,7 +197,7 @@
           </div>
         </div>
 
-  
+
       </div>
     </main>
 
@@ -220,10 +232,58 @@
       </div>
     </footer>
 
+    <!-- lightbox popup from charity sign up -->
+        <div class="modal fade popUpModal container" id="donatePopup" role="dialog">
+          <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+                <h2 class="popUp">Donation Request</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-body popUpForm col-xs-8 col-md-6">
+                <form>
+                <label>What do you need?</label>
+                <select>
+                  <option selected>Needs</option>
+                  <option value="householdGoods">Household Goods</option>
+                  <option value="money">Money</option>
+                  <option value="dryGoods">Dry Goods</option>
+                  <option value="volunteer">Volunteer Time</option>
+                  <option value="meals">Meals</option>
+                </select>
+                <label>How much do you need?</label>
+                <input type="text" name="organizationName">
+                <label>How long are you accepting donations?</label>
+                <input type="text" name="address">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="cb" type="checkbox"><span>Recurring Donation</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="cb" type="checkbox"><span>Willing to pick up</span>
+                  </label>
+                </div>
+
+                <label>Special Notes</label>
+                <textarea name="notes" rows="8" cols="80"></textarea>
+                <label>Add Tags</label>
+                <textarea name="tags" rows="8" cols="80"></textarea>
+                <button id="donate" type="submit" name="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
     <!-- SCRIPTS -->
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/lightboxModal.js"></script>
   </body>
 </html>

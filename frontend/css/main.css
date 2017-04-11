@@ -105,7 +105,7 @@ form input {
   color: #ffffff;
   font-size: 18px;
   font-family: Arial;
-  width: 100%;
+  min-width: 100%;
   max-width: 100%;
   margin: 0;
   text-align: center;
@@ -117,6 +117,10 @@ form input {
   text-decoration: underline;
  }
 
+/*TEXT ON SEARCH PAGES*/
+.searchHeadText{
+  margin-top: 50px;
+}
 
 /*PROFILE SIDEBAR*/
 .greetings {
@@ -188,9 +192,7 @@ form input {
   margin-left: 25%;
 }
 
-.profile-edit {
-  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
-}
+
 /*Donation History Table*/
 .historyTable{
   border: none;

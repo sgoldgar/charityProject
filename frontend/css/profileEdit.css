@@ -1,0 +1,27 @@
+.profile-edit {
+  box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
+  padding: 10px;
+  background-color: #FFFFFF;
+  color: #9B9B9B;
+  font-family: Arial-BoldMT;
+  font-size: 12px;
+  radius: 5px;
+}
+
+.profile-edit input, textarea {
+  border-radius: 5px;
+}
+
+h2.inner-title {
+  color: #00B7D1;
+  font-family: Arial-Black;
+  font-size: 36px;
+}
+
+textarea {
+  resize: none;
+}
+
+.cb, span{
+  margin-left: 10px;
+}
