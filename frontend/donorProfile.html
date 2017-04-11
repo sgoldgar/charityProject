@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Donations History</title>
+    <title>Donor Profile</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/charityportal_stylesheet.css">
   </head>
 
   <body>
@@ -15,7 +16,7 @@
         <div class="row header-row">
 <!-- This is where the logo will go and it links back to home page. -->
           <div class="col-xs-4 col-md-4">
-            <a href="homepage.html"><img src="assets/Page-1.svg" alt="logo"></a>
+            <a href="homepage.html"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
           </div>
 <!-- This is the nav bar.  Needs to be static and jump scroll. -->
           <div class="col-xs-8 col-md-8">
@@ -53,12 +54,12 @@
             </div>
             <ul class="profile-sidebar">
               <!-- donations link -->
-              <li class="selected-link">
+              <li>
                 <a href="#">Donations</a>
               </li>
               <!-- messages link -->
               <li>
-                <a href="messages.html">Messages</a>
+                <a href="#">Messages</a>
               </li>
               <!-- notifications link -->
               <li>
@@ -78,51 +79,8 @@
           </div>
           <!-- main content, changes based on where you navigate -->
           <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="inner-title">Donations History</h2>
-            <section class="inner-content">
-              <table class="historyTable">
-                <tr class="headerTable">
-                  <th>Date</th>
-                  <th>Donation</th>
-                  <th>Event</th>
-                </tr>
-                <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-                 <tr class="rowTable">
-                  <td>25 March 2017</td>
-                  <td>13 Volunteers</td>
-                  <td>Soup Kitchen Event</td>
-                </tr>
-              </table>
-            </section>
+            <h2 class="inner-title">Search Needs</h2>
+            <section class="inner-content"></section>
           </div>
         </div>
 
@@ -138,9 +96,9 @@
 <!-- Column one three links in a ul. -->
           <div class="col-xs-4 col-md-4">
             <ul class="footer-links">
-              <li><a href="#">about us</a></li>
-              <li><a href="#">contact us</a></li>
-              <li> <a href="#">help</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li> <a href="#">Help</a></li>
             </ul>
           </div>
 <!-- Column two has text -->
@@ -160,11 +118,10 @@
       </div>
     </footer>
 
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script src=“//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js” type=“text/javascript”></script>
-    <script src=‘script.js’ type=“text/javascript”></script>
+    <!-- SCRIPTS -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

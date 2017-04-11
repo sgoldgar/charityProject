@@ -18,7 +18,7 @@
         <div class="row header-row">
     <!-- This is where the logo will go and it links back to home page. -->
               <div class="col-xs-4 col-md-4">
-                <a href="#"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
+                <a href="homepage.html"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
               </div>
     <!-- This is the nav bar.  Needs to be static and jump scroll. -->
               <div class="col-xs-8 col-md-8">
@@ -28,7 +28,7 @@
                     <li><a href="#">Contact Us</a></li>
                     <li> <a href="#">Help</a></li>
                     <!-- sign-up button -->
-                    <button class="button" id="sign-in" type="button">Sign In </button>
+                    <button class="button signUpButton" id="sign-in" type="button">SIGN IN</button>
                   </ul>
                 </nav>
               </div>
@@ -110,6 +110,7 @@
       </div>
     </footer>
 
+      <!-- Join now lightbox for donor reg -->
      <div class="modal fade popUpModal container" id="joinUpPopup" role="dialog">
           <div class="modal-dialog">
           <div class="row">
@@ -141,6 +142,38 @@
                 </div>
                 </form>
                 </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sign in lightbox -->
+    <!-- THIS IS A PLACEHOLDER FOR AUTH0 AUTH -->
+      <div class="modal fade popUpModal container" id="logInPopup" role="dialog">
+          <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+                <h2 class="popUp">Sign In</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="modal-body popUpForm col-xs-8 col-md-6">
+                <form>
+                <label>Username (email)</label>
+                <input type="text" name="email">
+                <label>Password</label>
+                <input type="text" name="password">
+                <button class="logIn" type="submit" name="logIn">Log In</button>
+                </form>
+              </div>
+              <div class="modal-footer popUpFooter col-xs-8 col-md-6">
+                <a href="#" class="logIn">
+                  <img src="assets/GooglePlusLogin.svg" alt="Log In With Google">
+                </a>
+                <a href="#" class="logIn">
+                  <img src="assets/facebook-login.png" alt="Log In With Facebook">
+                </a>
+              </div>
             </div>
           </div>
         </div>

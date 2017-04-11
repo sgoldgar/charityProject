@@ -105,7 +105,7 @@ form input {
   color: #ffffff;
   font-size: 18px;
   font-family: Arial;
-  width: 100%;
+  min-width: 100%;
   max-width: 100%;
   margin: 0;
   text-align: center;
