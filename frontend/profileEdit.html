@@ -40,16 +40,19 @@
         <div class="row main-row">
           <!-- left side bar, doesn't change -->
           <div class="col-md-4 col-sm-12 col-xs-12 ">
+            <!-- main greeting -->
+            <div class="greetings">
+              <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
+              <div class="greeting-container">
+                <h2>Greetings <br><span>NAME!</span></h2>
+              </div>
+              <div class="greeting-image-container">
+                <img src="assets/Profile-Icon.svg" alt="profile-picture">
+              </div>
+
+
+            </div>
             <ul class="profile-sidebar">
-              <!-- main greeting -->
-              <li class="greetings">
-                <!-- name will be generated from ajax call and add an exclamation point, add id on jquery-->
-                <p>Greetings
-                <span class="greeting-name">NAME</span></p>
-
-                <img src="assets/profile-icon.svg" alt="profile-picture">
-              </li>
-
               <!-- donations link -->
               <li>
                 <a href="#">Donations</a>
@@ -185,7 +188,7 @@
           </div>
         </div>
 
-  
+
       </div>
     </main>
 
