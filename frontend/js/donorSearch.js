@@ -89,16 +89,11 @@ $(".submitSearch").on('click', function(){
         console.log('need search', needSearch)
 
     });
-
-
-<<<<<<< HEAD
-    findNeeds(needSearch);
-=======
     console.log('needSearch ', needSearch);
     findneeds(needSearch);
->>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
+
   });
-  
+
 
 // ajax call to database based on needs selected
   function findNeeds(needs) {
@@ -121,22 +116,3 @@ $(".submitSearch").on('click', function(){
 
 
   };
-//
-//
-//   getNeeds.done(function(response) {
-//     $(this ).addClass( "done" );
-//     // flag=response.sys.country;
-//     // flagPic=flag.toLowercase();
-//
-//       console.log(city, temperature, humidity, flag)
-//
-//       //put API response into the DOM
-//       // $('.search-results').find('.results-city').text(city).append('<img src="'+iconUrl+'"/>');
-//       // $('.temperature-container .temperature').text(temperature + ' F');
-//       // $('.humidity-container .humidity').text(humidity);
-//       // $('.results').find('.flag-icon').prepend('<span>"flag-icon-'+ flagPic'(</span>');
-//
-//
-//     });
-//
-
