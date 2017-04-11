@@ -22,6 +22,6 @@ textarea {
   resize: none;
 }
 
-.cb, span{
+.form-check-label span{
   margin-left: 10px;
 }
