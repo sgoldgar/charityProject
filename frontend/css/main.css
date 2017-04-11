@@ -117,6 +117,10 @@ form input {
   text-decoration: underline;
  }
 
+/*TEXT ON SEARCH PAGES*/
+.searchHeadText{
+  margin-top: 50px;
+}
 
 /*PROFILE SIDEBAR*/
 .greetings {
