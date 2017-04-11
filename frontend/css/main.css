@@ -38,7 +38,7 @@ nav ul li, .social-media li {
 
 
 /*for all the buttons on the pages*/
-.button {
+.button, .contact-button {
   background-color: #80B773;
   color: white;
   border-radius: 100px;
@@ -99,6 +99,28 @@ form input {
   radius: 5px;
 }
 
+/*JOIN NOW BAR*/
+.joinBar {
+  background-color: #00B7D1;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: Arial;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  padding-top: 10px;
+}
+
+.join { 
+  text-decoration: underline;
+ }
+
+/*TEXT ON SEARCH PAGES*/
+.searchHeadText{
+  margin-top: 50px;
+}
 
 /*PROFILE SIDEBAR*/
 .greetings {

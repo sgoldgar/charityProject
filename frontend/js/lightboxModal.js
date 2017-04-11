@@ -8,11 +8,19 @@ $(document).ready(function(){
 	$('.dropButton').hide();
 
 	$('#sign-in').click(function(){
-		$('#logInPopup').modal('show')
+		$('#logInPopup').modal('show');
 	});
 
 	$('#sign-up').click(function(){
-		$('#signUpPopup').modal('show')
+		$('#signUpPopup').modal('show');
+	});
+
+	$('.join').click(function(){
+		$('#joinUpPopup').modal('show');
+	});
+
+	$('#contactUs').click(function(){
+		$('#contactPopup').modal('show');
 	});
 
 	$('#donate').click(function () {
@@ -24,22 +32,37 @@ $(document).ready(function(){
 	$('.logIn').click(function(e){
 		e.preventDefault();
 		$('#logInPopup').modal('hide');
-		$('#sign-in').hide();
-		$('.dropButton').show();
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='charityProfile.html';
 	});
 
 	$('#signUp').click(function(e){
 		e.preventDefault();
 		$('#signUpPopup').modal('hide');
-		$('#sign-in').hide();
-		$('.dropButton').show();
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='profileEdit.html';
+	});
+
+	$('#joinUp').click(function(e){
+		e.preventDefault();
+		$('#joinUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='donorProfile.html';
 	});
 
 	$('.close').click(function(e){
 		e.preventDefault();
 		$('#signUpPopup').modal('hide');
 		$('#logInPopup').modal('hide');
+
 		$('#donatePopup').modal('hide');
+
+		$('#joinUpPopup').modal('hide');
+		$('#contactPopup').modal('hide');
+
 	});
 
 
