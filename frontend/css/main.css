@@ -224,6 +224,10 @@ td{
   background-color: #00B7D1;
 }
 
+span .caret{
+  margin-left: 20px !important;
+}
+
 /*FOOTER*/
 footer{
   background-color: #616161;
