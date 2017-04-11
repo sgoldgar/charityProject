@@ -23,6 +23,10 @@ $(document).ready(function(){
 		$('#contactPopup').modal('show');
 	});
 
+	$('#donate').click(function () {
+		$('#donatePopup').modal('show')
+	});
+
 		// there will be more to this when ajax call introduced
 
 	$('.logIn').click(function(e){
@@ -53,8 +57,12 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#signUpPopup').modal('hide');
 		$('#logInPopup').modal('hide');
+
+		$('#donatePopup').modal('hide');
+
 		$('#joinUpPopup').modal('hide');
 		$('#contactPopup').modal('hide');
+
 	});
 
 
