@@ -5,7 +5,8 @@
     <title>Donations History</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/charityProfile.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/donationHistory.css">
   </head>
 
   <body>
@@ -53,8 +54,12 @@
             </div>
             <ul class="profile-sidebar">
               <!-- donations link -->
-              <li class="selected-link">
+              <li>
                 <a href="donationHistory.html">Donations</a>
+                <button class="donation-button button" id="donate">
+                  <span class="plus-sign">+<br>
+                  </span> Add <br>Request
+                </button>
               </li>
               <!-- messages link -->
               <li>
@@ -67,12 +72,6 @@
               <!-- event calendar -->
               <li>
                 <a href="#">Event Calendar</a>
-              </li>
-              <!-- donation request button -->
-              <li>
-                <button class="donation-button button">
-                  <span class="plus-sign">+</span><br> Donation<br> Request
-                </button>
               </li>
             </ul>
           </div>
@@ -245,11 +244,63 @@
       </div>
     </footer>
 
+    <!-- Donation Schedule -->
+    <!-- lightbox popup from charity sign up -->
+        <div class="modal fade popUpModal container" id="donatePopup" role="dialog">
+          <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <h2 class="popUp">Donation Request</h2>
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+              </div>
+          </div>
+
+            <div class="row">
+              <div class="modal-body popUpForm col-xs-8 col-md-6">
+                <form>
+                <label>What do you need?</label>
+                <select>
+
+                  <option selected>---</option>
+
+                  <option value="householdGoods">Household Goods</option>
+                  <option value="money">Money</option>
+                  <option value="dryGoods">Dry Goods</option>
+                  <option value="volunteer">Volunteer Time</option>
+                  <option value="meals">Meals</option>
+                </select>
+                <label>How much do you need?</label>
+                <input type="text" name="organizationName">
+                <label>How long are you accepting donations?</label>
+                <input type="text" name="address">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="cb" type="checkbox"><span>Recurring Donation</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="cb" type="checkbox"><span>Willing to pick up</span>
+                  </label>
+                </div>
+
+                <label>Special Notes</label>
+                <textarea name="notes" rows="8" cols="80"></textarea>
+                <label>Add Tags</label>
+                <textarea name="tags" rows="8" cols="80"></textarea>
+                <button id="donate" type="submit" name="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/lightboxModal" charset="utf-8"></script>
     <!-- <script src=“//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js” type=“text/javascript”></script> -->
    <!--  <script src=‘script.js’ type=“text/javascript”></script> -->
   </body>

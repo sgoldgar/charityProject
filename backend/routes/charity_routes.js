@@ -8,11 +8,14 @@ var charityconn = require('../db/charity_db'),
 router.post('/needs', function(req, res, next) {
 
   console.log('inside charity needs');
-
+  console.log('req.body[needs]', req.body['needs']);
   var returnarrayobject = [];
   var dumcount = 0;
   var returncharities = [];
-  var reqneedsarray = req.body['needs[]'];
+  var reqstring = req.body['needs']
+  var reqneedsarray = reqstring.split(',');
+  console.log('reqneedsarray', reqneedsarray);
+
 
   var loopcounter = 0;
   var looplength = 0;
@@ -27,6 +30,7 @@ router.post('/needs', function(req, res, next) {
 
         for (var i = 0; i<post.needs.length; i++){
           for (var j = 0; j<reqneedsarray.length; j++){
+
             if (post.needs[i].trim()==reqneedsarray[j].trim()){
               returncharities.push(post);
               console.log("hey there sailor");
