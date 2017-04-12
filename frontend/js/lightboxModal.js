@@ -66,6 +66,7 @@ $(document).ready(function(){
 	});
 
 
+
 function personalizeProfile(){
 
     var url = 'http://localhost:3000/donorprofile';
