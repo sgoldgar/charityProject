@@ -88,4 +88,4 @@ $(document).ready(function(){
 
 //     personalizeProfile();
 
-});
+// });
