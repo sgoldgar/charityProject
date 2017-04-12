@@ -90,29 +90,29 @@ $(document).ready(function(){
 	});
 
 
-function personalizeProfile(){
+// function personalizeProfile(){
 
-    var url = 'http://localhost:3000/donorprofile';
-    var data = {
-     	name: name,
-     // img: img
-   };
+//     var url = 'http://localhost:3000/donorprofile';
+//     var data = {
+//      	name: name,
+//      // img: img
+//    };
 
-   var personalize = $.ajax({
-   type: 'GET',
-   url: url,
-   data: data
-    });
+//    var personalize = $.ajax({
+//    type: 'GET',
+//    url: url,
+//    data: data
+//     });
 
-    personalize.done(function(response){
-        console.log('response: ', response);
-
-
-     });
-    }
+//     personalize.done(function(response){
+//         console.log('response: ', response);
 
 
-    personalizeProfile();
+//      });
+//     }
+
+
+//     personalizeProfile();
 
 
 });
