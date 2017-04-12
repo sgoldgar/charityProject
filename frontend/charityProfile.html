@@ -27,7 +27,15 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li> <a href="#">Help</a></li>
-                <li><a href="#">Profile</a></li>
+                <li>
+                    <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn">Profile</button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="homepage.html" class="signOut">Sign Out</a>
+                        <a href="#">Edit Profile</a>
+                      </div>
+                    </div>
+                </li>
               </ul>
             </nav>
           </div>
@@ -207,7 +215,7 @@
         </div>
       </div>
     </footer>
-      
+
       <!-- contact us modal -->
      <div class="modal fade popUpModal container" id="contactPopup" role="dialog">
         <div class="modal-dialog">
@@ -237,5 +245,6 @@
     <!-- Bootstrap JS CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/lightboxModal.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
+
  
  
 var charityconn = require('../db/charity_db'),
   charity_model = charityconn.model('charitySchema');
- 
+
 router.post('/needs', function(req, res, next) {
  
   console.log('inside charity needs');
@@ -15,8 +16,7 @@ router.post('/needs', function(req, res, next) {
   var reqstring = req.body['needs']
   var reqneedsarray = reqstring.split(',');
   console.log('reqneedsarray', reqneedsarray);
- 
- 
+
   var loopcounter = 0;
   var looplength = 0;
  
@@ -27,10 +27,12 @@ router.post('/needs', function(req, res, next) {
       posts.forEach(function(post){
  
         loopcounter+=1;
+
  
         for (var i = 0; i<post.needs.length; i++){
           for (var j = 0; j<reqneedsarray.length; j++){
  
+
             if (post.needs[i].trim()==reqneedsarray[j].trim()){
               returncharities.push(post);
               console.log("hey there sailor");
@@ -44,8 +46,7 @@ router.post('/needs', function(req, res, next) {
  
       });
     });
- 
- 
+
   });
  
   promise.then(function(resolve){
@@ -54,9 +55,8 @@ router.post('/needs', function(req, res, next) {
       res.json(returncharities);
     }
   });
- 
- 
- 
+
+
 });
  
  

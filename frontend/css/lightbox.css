@@ -1,134 +1,78 @@
+.modal-dialog {
+	background-color: white;
+	width: 50%;
+}
 
-	.close{
-		box-shadow: 2px 2px 2px grey;
-		background-color: gray;
-		border: 1px solid gray;
-		margin-right: 30%
-	}
+.OR {
+	margin: 6% 46%;
+}
 
-	.popUpModal{
-		background: #ffffff;
-		height: 75%;
-		max-height: 100%;
-		max-width: 100%;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		border-radius: 6px;
-  	}
+.modal-header, .modal-footer{
+	margin: 3% 25%;
+}
 
-	.popUpHeader p{
-		color: grey;
-		font-size: 15px;
-		padding: 4px;
-		background-color: red;
-		float: right;
-		margin-right: 5px;
-		max-width: 100%
-	}
+.modal-header h2 {
+	color: #00B7D1;
+	font-size: 36px;
+	font-weight: 800;
+	margin: 0 25%;
+}
 
-	.popUpHeader h2{
-		color: #00B7D1;
-		font-size: 36px;
-		font-family: Arial;
-		text-align: center;
-		padding-bottom: 0px;
-		margin-bottom: 0px;
-		width: 100%;
-	}
+.modal-header .close {
+	box-shadow: 2px 2px 2px grey;
+	background-color: gray;
+	border: 1px solid gray;
+	margin-left: 25%;
+	margin-top: -20%;
+}
 
-	.modal-header{
-		margin-top: 0px !important;
-		padding-top: 0px !important;
-		border-bottom-width: 80% !important;
-	}
+.modal-body {
+	margin: 1% 25%;
+}
 
-	.popUpForm input, .popUpForm label, .popUpForm button{
-		display: flex;
-		align-items: center;
-		margin-left: 30%;
-		border-radius: 5px;
-	}
+.modal-body form label, .modal-body form input {
+	width: 100%;
+}
 
-/*Modal Styling*/
-	.modal-dialog{
-		margin: 1% 25%;
-	}
+.modal-body form input {
+	border: 1px solid lightgray;
+	margin-bottom: 6%;
+}
 
-	.modal {
-		max-width: 50%;
-	}
-
-	.modal button{
-		margin-top: 5%;
-
-    margin-left: 43%;
-		background-color: #80B773;
-		color: white;
-		border-radius: 100px;
-		/*border 1px inside (margin? from UX)*/
-		font-size: 14px;
-		font-family: Arial;
-		border: none;
-		font-weight: 300;
-		padding: 3% 5%;
-	}
-
-	.modal-body label{
-		margin-bottom: 3%;
-	}
-
-	.modal-footer {
-		width: 100%;
-	}
-
-	.modal-footer img {
-		width: 30%;
-		margin-left: 18%;
-		display: inline;
-		float: left;
-	}
-
-	#logInPopup .modal-footer img {
-		width: 15%;
-		margin-left: 7%;
-
-		margin-top: 7%;
-
-		display: inline;
-		float: left;
-	}
-
-	.modal-body form p {
-		margin: 5% 53%;
-	}
+.modal-body button {
+	margin: 6% 35%;
+	background-color: #80B773;
+	color: white;
+	border-radius: 100px;
+	font-size: 14px;
+	border: none;
+	font-weight: 300;
+	padding: 3% 5%;
+}
 
 
-	/*DONATIONS*/
-	#donatePopup .modal-body label, #donatePopup .modal-body input {
-		float: left;
-		margin-left: 10%;
-		margin-bottom: 2%;
-	}
+.modal-footer a:first-child {
+	float: left;
+	margin-left: 6%;
+}
 
-	#donatePopup .modal-body select {
-		width: 100%;
-		margin-left: 8%;
-		margin-bottom: 3%;
-	}
+.modal-footer a:nth-child(2n) {
+	margin-right: 6%;
+}
 
-	#donatePopup .modal-body input {
-		padding-left: 50%;
-	}
+#joinUpPopup .modal-footer {
+	margin: 3% 0;
+	width: 100%;
+}
 
-	#donatePopup .form-check label {
-		width: 100%;
-		margin-top: 6%;
-	}
+#donatePopup select {
+	margin: 5% 0;
+}
 
-	#donatePopup textarea {
-		max-width: 100%;
-		margin-left: 10%;
-	}
+#donatePopup .cb {
+	width: 10%;
+}
 
+#donatePopup textarea{
+	max-width: 100%;
+}
