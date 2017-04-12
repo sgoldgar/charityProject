@@ -1,4 +1,4 @@
-console.log('all ready');
+ console.log('all ready');
 
 
 $(function() {
@@ -55,7 +55,7 @@ $('.group-btns .btn').on('click',function(event){
 
 
 
-function findneeds(needs){
+function findNeeds(needs){
 
   var url = 'http://localhost:3000/charityportal/needs';
 
@@ -90,7 +90,7 @@ $(".submitSearch").on('click', function(){
 
     });
     console.log('needSearch ', needSearch);
-    findneeds(needSearch);
+    findNeeds(needSearch);
 
   });
 
