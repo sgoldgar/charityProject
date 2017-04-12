@@ -6,9 +6,6 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
-    "bcrypt-as-promised": "^1.1.0",
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.3",
@@ -16,7 +13,7 @@
     "dotenv": "^4.0.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
-    "mongoose": "^4.9.3",
+    "mongoose": "^4.9.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
   }
