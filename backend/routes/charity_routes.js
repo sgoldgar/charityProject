@@ -16,6 +16,7 @@ router.post('/needs', function(req, res, next) {
   var reqneedsarray = reqstring.split(',');
   console.log('reqneedsarray', reqneedsarray);
 
+
   var loopcounter = 0;
   var looplength = 0;
 
@@ -29,8 +30,6 @@ router.post('/needs', function(req, res, next) {
 
         for (var i = 0; i<post.needs.length; i++){
           for (var j = 0; j<reqneedsarray.length; j++){
-
-            console.log('post.needs[i] ', post.needs[i], ' reqneedsarray[j] ', reqneedsarray[j]);
 
             if (post.needs[i].trim()==reqneedsarray[j].trim()){
               returncharities.push(post);
