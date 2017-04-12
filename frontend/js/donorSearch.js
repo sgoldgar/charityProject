@@ -100,30 +100,33 @@ function findNeeds(needs){
 
   //  *SET BACKGROUND TO WHITE*/
 
-   var charities = [];
-
    //loop through array of responses to query and append onto page
    for (var j=0; j<response.length; j++){
-     console.log('Charity Name is ' + response[j].name); //check charity name
-     charities.push(response[j].name) //add charity to charities array
+     var allCharities = [];
+     console.log(allCharities);
+     allCharities.push(response[j].name); //add charity to charities array
+     console.log(response[j].name);
      /*Check to see if charity matches one already returned in results*/
-     for (var k = 0; k < charities.length; k++) {
+     for (var k = 0; k < allCharities.length; k++) {
+            console.log(allCharities[k]);
        /*If it matches move on*/
-       if (response[j].name === charities[k]){
+       if (response[j].name === allCharities[k] && response[j].name != allCharities[0]){
+         console.log('skipping this charity', response[j].name, allCharities[k]);
          continue
        }
        /*Otherwise add it to search results*/
        else {
          $('.search-results-container').append(  //need to add search-results-container to HTML
            '<div class="result-container">' + //make a div to contain a single result
-             /*APPEND CHARITY NAME*/
-             '<h3 class="inner-title">' + response[j].name +'</h3>' +
+             /*APPEND CHARITY NAME AND EMAIL ICON*/
+             '<h3 class="inner-title">' + response[j].name +'<span class="email-icon"><img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"> </h3>' +
              /*APPEND CHAIRITY LOGO*/
              '<div class="col-md-4 col-sm-4 col-xs-4">' +
                '<img class="charity-logo" src="' + response[j].img +'" alt="' + response[j].name + ' logo">' +
              '</div>' +
-             /*APPEND CHARITY HOURS*/
-             '<div class="col-md-4 col-sm-4 col-xs-4">' +
+             /*APPEND CHARITY INFO*/
+             '<div class="col-md-8 col-sm-8 col-xs-8">' +
+                /*APPEND CHARITY HOURS*/
                '<div class="hours">' +
                  '<p>Hours:</p>' +
                  '<p>'+ response[j].hours + '</p>' +
@@ -135,14 +138,9 @@ function findNeeds(needs){
                '</div>' +
              /*APPEND NEEDS*/
                '<div class="needs-text">' +
+                  '<h4> Needs </h4>' +
                  '<ul class="needs">' +
                  '</ul>' +
-             /*APPEND EMAIL BUTTON*/
-             '<div class="col-md-4 col-sm-4 col-xs-4">' +
-               '<button class="contact-button" id="contactUs">' +
-                 '<img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon">' +
-               '</button>' +
-             '</div>' +
            /*END CONTAINER*/
            '</div>'
            );
