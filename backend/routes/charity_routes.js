@@ -11,17 +11,8 @@ router.post('/needs', function(req, res, next) {
 
   var returnarrayobject = [];
   var dumcount = 0;
-  var reqneedsarray = [];
-  var reqneedsstring = req.body["needs[]"];
   var returncharities = [];
-  reqneedsarray.push(reqneedsstring);
-
-  console.log('req.body.needs ', req.body.needs);
-  console.log('req.needs ', req.needs);
-  console.log('req.body ', req.body);
-  console.log('req.body.needs[]', req.body["needs[]"]);
-  console.log('reqneedsstring', reqneedsstring);
-  console.log('reqneedsarray[0]', reqneedsarray[0]);
+  var reqneedsarray = req.body['needs[]'];
 
   var loopcounter = 0;
   var looplength = 0;
@@ -34,17 +25,8 @@ router.post('/needs', function(req, res, next) {
 
         loopcounter+=1;
 
-        // console.log('reqneedsarrary[0]', reqneedsarray[0]);
-        // console.log('reqneedsarray.length', reqneedsarray.length);
-
         for (var i = 0; i<post.needs.length; i++){
           for (var j = 0; j<reqneedsarray.length; j++){
-            // console.log("all aboard");
-             console.log("post.needs[i]", post.needs[i]);
-            // console.log('reqneedsarrary', reqneedsarray);
-            // console.log('i ', i, ' j ', j);
-            // console.log('reqneedsarrary[0]', reqneedsarray[0]);
-             console.log("reqneedsarrary[j]", reqneedsarray[j]);
             if (post.needs[i].trim()==reqneedsarray[j].trim()){
               returncharities.push(post);
               console.log("hey there sailor");
