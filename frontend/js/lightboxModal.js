@@ -45,13 +45,13 @@ $(document).ready(function(){
 		window.location.href='profileEdit.html';
 	});
 
-	$('#joinUp').click(function(e){
-		e.preventDefault();
-		$('#joinUpPopup').modal('hide');
-		// $('#sign-in').hide();
-		// $('.dropButton').show();
-		window.location.href='donorProfile.html';
-	});
+	// $('#joinUp').click(function(e){
+	// 	e.preventDefault();
+	// 	$('#joinUpPopup').modal('hide');
+	// 	// $('#sign-in').hide();
+	// 	// $('.dropButton').show();
+	// 	window.location.href='donorProfile.html';
+	// });
 
 	$('.close').click(function(e){
 		e.preventDefault();
