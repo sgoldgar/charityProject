@@ -1,36 +1,13 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
-=======
 
->>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
 
-<<<<<<< HEAD
-=======
 var charityconn = require('../db/charity_db'),
   charity_model = charityconn.model('charitySchema');
->>>>>>> dev
 
-<<<<<<< HEAD
-var charityconn = require('../db/charity_db'),
- charity_model = charityconn.model('charitySchema');
-
-router.post('/needs', function(req, res, next) {
-
- console.log('inside charity needs');
-
- var returnarrayobject = [];
- var dumcount = 0;
- var reqneedsarray = [];
- var reqneedsstring = req.body["needs[]"];
- var returncharities = [];
- reqneedsarray.push(reqneedsstring);
-=======
 router.post('/needs', function(req, res, next) {
 
   console.log('inside charity needs');
-  console.log(req.body.needs);
-  console.log(req.body['needs[]']);
 
   var returnarrayobject = [];
   var dumcount = 0;
@@ -40,7 +17,7 @@ router.post('/needs', function(req, res, next) {
   reqneedsarray.push(reqneedsstring);
 
   console.log('req.body.needs ', req.body.needs);
-  // console.log('req.needs ', req.body.needs);
+  console.log('req.needs ', req.needs);
   console.log('req.body ', req.body);
   console.log('req.body.needs[]', req.body["needs[]"]);
   console.log('reqneedsstring', reqneedsstring);
@@ -81,64 +58,8 @@ router.post('/needs', function(req, res, next) {
 
       });
     });
->>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
-
- console.log('req.body.needs ', req.body.needs);
- console.log('req.needs ', req.needs);
- console.log('req.body ', req.body);
- console.log('req.body.needs[]', req.body["needs[]"]);
- console.log('reqneedsstring', reqneedsstring);
- console.log('reqneedsarray[0]', reqneedsarray[0]);
-
-<<<<<<< HEAD
- var loopcounter = 0;
- var looplength = 0;
-
- promise = new Promise(function(result){
-
-   charity_model.find({}, function(err,posts){
-     looplength = posts.length;
-     posts.forEach(function(post){
-
-       loopcounter+=1;
-
-       // console.log('reqneedsarrary[0]', reqneedsarray[0]);
-       // console.log('reqneedsarray.length', reqneedsarray.length);
-
-       for (var i = 0; i<post.needs.length; i++){
-         for (var j = 0; j<reqneedsarray.length; j++){
-           // console.log("all aboard");
-            console.log("post.needs[i]", post.needs[i]);
-           // console.log('reqneedsarrary', reqneedsarray);
-           // console.log('i ', i, ' j ', j);
-           // console.log('reqneedsarrary[0]', reqneedsarray[0]);
-            console.log("reqneedsarrary[j]", reqneedsarray[j]);
-           if (post.needs[i].trim()==reqneedsarray[j].trim()){
-             returncharities.push(post);
-             console.log("hey there sailor");
-           }
-         }
-       }
-
-       if (looplength === loopcounter){
-         result(true);
-       }
-
-     });
-   });
 
 
- });
-
- promise.then(function(resolve){
-   if (resolve){
-     console.log("returncharities ", returncharities);
-     res.json(returncharities);
-   }
- });
-
-
-=======
   });
 
   promise.then(function(resolve){
@@ -149,7 +70,6 @@ router.post('/needs', function(req, res, next) {
   });
 
 
->>>>>>> 454e33eab1d4b5aa6723a8488f33d8ef39f2a958
 
 });
 
