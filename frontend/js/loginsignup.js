@@ -3,7 +3,6 @@ $(function(){
 	console.log("sanity check");
 
     function logincheck(username, password){
-		
 		var url = 'http://localhost:3000/login/';
 
 		console.log('username', username);
@@ -27,7 +26,6 @@ $(function(){
 			if (response.goto==="passwordsdontmatch"){
 				alert("password or username is not correct");
 			}else{
-				
 				//the following localstorage set is to identify users in chat
 				localStorage.setItem('username', username);
 
@@ -45,7 +43,7 @@ $(function(){
 
 	function pushdonatorinfo(){
 		var url = 'http://localhost:3000/login/signup/donatorpost';
-		
+
 		var name = $('.donorname').val();
 		var username = $('.donoremail').val();
 		var email = $('.donoremail').val();
@@ -79,11 +77,14 @@ $(function(){
     	var name = $(".charityorginizationname").val();
     	var address = $(".charityaddress").val();
     	var organizationname = $(".charityorginizationname").val();
+			var email = $('.charityemail').val();
 
     	console.log(" name ", name, " address ", address);
 
     	var data2 = {
     		//bio: name,
+    		profileManager: me,
+				email: email,
     		streetAddress: address,
     		charityName: organizationname
     	};
@@ -130,6 +131,7 @@ $(function(){
 				}else if (type === "donator"){
 					pushdonatorinfo();
 				}					
+
 			}
 			if (response.status==='reject'){
 				alert('username already taken, please choose another');
@@ -165,4 +167,4 @@ $(function(){
 			}
 	});
 })
-   
+

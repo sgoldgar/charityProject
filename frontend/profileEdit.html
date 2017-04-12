@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Edit Profile</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/profileEdit.css">
-    <link rel="stylesheet" href="css/lightbox.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Edit Profile</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/profileEdit.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+</head>
 
-    <header>
-      <div class="container header-container">
-        <div class="row header-row">
-<!-- This is where the logo will go and it links back to home page. -->
-          <div class="col-xs-4 col-md-4">
-            <a href="homepage.html"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
-          </div>
-<!-- This is the nav bar.  Needs to be static and jump scroll. -->
-          <div class="col-xs-8 col-md-8">
-            <nav>
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li> <a href="#">Help</a></li>
-                <li><a href="#">Profile</a></li>
-              </ul>
-            </nav>
-          </div>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <div class="row header-row">
+        <!-- This is where the logo will go and it links back to home page. -->
+        <div class="col-xs-4 col-md-4">
+          <a href="homepage.html"><img class="header-logo" src="assets/Page-1.svg" alt="logo"></a>
+        </div>
+        <!-- This is the nav bar.  Needs to be static and jump scroll. -->
+        <div class="col-xs-8 col-md-8">
+          <nav>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li> <a href="#">Help</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -93,14 +93,16 @@
                 </label>
 
 
-                <!-- Organization Name -->
-                <div>
+              <!-- Organization Name -->
+              <div>
+
 
                   <label for="charityName">Organization Name</label><br>
                   <input type="text" id="orgName" name="charityName" required>
                   <label>What do you need?</label>
                   <select name="needs">
-                    <option selected>Needs</option>
+                    <option selected>---</option>
+
                     <option value="householdGoods">Household Goods</option>
                     <option value="money">Money</option>
                     <option value="dryGoods">Dry Goods</option>
@@ -108,17 +110,17 @@
                     <option value="meals">Meals</option>
                   </select>
 
-                </div>
+              </div>
 
-                <!-- Organization address -->
-                <div>
+              <!-- Organization address -->
+              <div>
 
 
-                  <label for="streetAddress">Organization Address</label><br>
-                  <input type="text" id="orgAddress" name="streetAddress"required><br><br>
-                  <input type="text" id="city" name="city" placeholder="City" required>
+                <label for="streetAddress">Organization Address</label><br>
+                <input type="text" id="orgAddress" name="streetAddress" required><br><br>
+                <input type="text" id="city" name="city" placeholder="City" required>
 
-                  <select id="states" name="state">
+                <select id="states" name="state">
                     <option selected>State</option>
                   	<option value="AL">Alabama</option>
                   	<option value="AK">Alaska</option>
@@ -176,30 +178,31 @@
 
                   <input type="text" id="zip" placeholder="Zip Code" name="zip" required><br>
                   <label for="phoneNumber">Phone Number</label>
-                  <label for="hours">Hours of Operation</label><br>
+                  <input type="text" id="phoneNumber" name="phoneNumber">
+                  <label for="hours">Hours of Operation</label>
 
-                  <input type="text" id="hours" name="hours">
+                  <input type="text" id="hours" name="hours"><br>
                   <label for="website">Company Website</label>
                   <input type="text" id="website" name="website">
                 </div>
 
 
-                <!-- Text box for company bio -->
-                <div>
-                  <label for="bio">Company Bio</label><br>
-                  <textarea name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
-                </div>
+              <!-- Text box for company bio -->
+              <div>
+                <label for="bio">Company Bio</label><br>
+                <textarea name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
+              </div>
 
-                <!-- Email and Profile admin -->
-                <div>
-                  <label for="profileManager">Profile Manager</label><br>
-                  <input type="text" name="profileManager"><br>
-                  <label for="email">Email Address</label><br>
-                  <input type="email" name="email" required>
-                </div>
+              <!-- Email and Profile admin -->
+              <div>
+                <label for="profileManager">Profile Manager</label><br>
+                <input type="text" name="profileManager"><br>
+                <label for="email">Email Address</label><br>
+                <input type="email" name="email" required>
+              </div>
 
-                <!-- Update Password -->
-                <!-- <div>
+              <!-- Update Password -->
+              <!-- <div>
                   <label for="password">Password</label><br>
                   <input type="password" name="oldPass" placeholder="Old Password" required><br>
                   <br>
@@ -208,48 +211,58 @@
                   <input type="password" name="confirmPass" placeholder="Confirm New Password" required>
                 </div> -->
 
-                <br><br>
+              <br><br>
 
-                <button class="button" type="Submit" name="saveChanges">Save Changes</button>
+
+                <button class="saveProfile" type="Submit" name="saveChanges">Save Changes</button>
               </form>
             </section>
           </div>
-        </div>
-
-
-      </div>
-    </main>
-
-
-
-    <!-- This is the footer. It's the same on every page. -->
-    <footer>
-      <div class="container footer-container">
-        <div class="row">
-<!-- Column one three links in a ul. -->
-          <div class="col-xs-4 col-md-4">
-            <ul class="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li> <a href="#">Help</a></li>
-            </ul>
-          </div>
-<!-- Column two has text -->
-          <div class="col-xs-4 col-md-4">
-            <p>CharityWish is dedicated to partnering volunteers and non-profits to enhance the lives of all people in Austin.</p>
-          </div>
-<!-- Column three has links in a ul to social media. -->
-          <div class="col-xs-4 col-md-4">
-            <ul class="social-media">
-              <li><a href="#"><img src="assets/post-twitter-icon.svg" alt="twitter"></a></li>
-              <li><a href="#"><img src="assets/post-facebook-icon.svg" alt="facebook"></a></li>
-              <li> <a href="#"><img src="assets/post-instagram-icon.svg" alt="instagram"></a></li>
-            </ul>
-          </div>
 
         </div>
       </div>
-    </footer>
+
+
+    </div>
+  </main>
+
+
+
+  <!-- This is the footer. It's the same on every page. -->
+  <footer>
+    <div class="container footer-container">
+      <div class="row">
+        <!-- Column one three links in a ul. -->
+        <div class="col-xs-4 col-md-4">
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li> <a href="#">Help</a></li>
+          </ul>
+        </div>
+        <!-- Column two has text -->
+        <div class="col-xs-4 col-md-4">
+          <p>CharityWish is dedicated to partnering volunteers and non-profits to enhance the lives of all people in Austin.</p>
+        </div>
+        <!-- Column three has links in a ul to social media. -->
+        <div class="col-xs-4 col-md-4">
+          <ul class="social-media">
+            <li>
+              <a href="#"><img src="assets/post-twitter-icon.svg" alt="twitter"></a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/post-facebook-icon.svg" alt="facebook"></a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/post-instagram-icon.svg" alt="instagram"></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
 
     <!-- lightbox popup from charity sign up -->
         <div class="modal fade popUpModal container" id="donatePopup" role="dialog">
@@ -260,12 +273,11 @@
                 <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
               </div>
           </div>
-
-            <div class="row">
-              <div class="modal-body popUpForm col-xs-8 col-md-6">
-                <form>
-                <label>What do you need?</label>
-                <select>
+      <div class="row">
+        <div class="modal-body popUpForm col-xs-8 col-md-6">
+          <form>
+            <label>What do you need?</label>
+            <select>
 
                   <option selected>---</option>
 
@@ -275,31 +287,30 @@
                   <option value="volunteer">Volunteer Time</option>
                   <option value="meals">Meals</option>
                 </select>
-                <label>How much do you need?</label>
-                <input type="text" name="organizationName">
-                <label>How long are you accepting donations?</label>
-                <input type="text" name="address">
-                <div class="form-check">
-                  <label class="form-check-label">
+            <label>How much do you need?</label>
+            <input type="text" name="organizationName">
+            <label>How long are you accepting donations?</label>
+            <input type="text" name="address">
+            <div class="form-check">
+              <label class="form-check-label">
                     <input class="cb" type="checkbox"><span>Recurring Donation</span>
                   </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
                     <input class="cb" type="checkbox"><span>Willing to pick up</span>
                   </label>
-                </div>
-
-                <label>Special Notes</label>
-                <textarea name="notes" rows="8" cols="80"></textarea>
-                <label>Add Tags</label>
-                <textarea name="tags" rows="8" cols="80"></textarea>
-                <button id="donate" type="submit" name="submit">Submit</button>
-                </form>
-                </div>
             </div>
-          </div>
+            <label>Special Notes</label>
+            <textarea name="notes" rows="8" cols="80"></textarea>
+            <label>Add Tags</label>
+            <textarea name="tags" rows="8" cols="80"></textarea>
+            <button id="donate" type="submit" name="submit">Submit</button>
+          </form>
         </div>
+      </div>
+    </div>
+  </div>
 
     <!-- SCRIPTS -->
     <!-- jQuery CDN -->
@@ -307,5 +318,7 @@
     <!-- Bootstrap JS CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/lightboxModal.js"></script>
+    <script type="text/javascript" src=js/profileEdit.js></script>
   </body>
 </html>
+

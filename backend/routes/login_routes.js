@@ -1,13 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-var passwordconn = require('../db/password_db'), 
+var passwordconn = require('../db/password_db'),
   password_model = passwordconn.model('passwordSchema');
   
 var donatorconn = require('../db/donator_db'), 
   donator_model = donatorconn.model('donatorSchema');
 
 var charityconn = require('../db/charity_db'), 
+  charity_model = charityconn.model('charitySchema');
+
+var donatorconn = require('../db/donator_db'),
+  donator_model = donatorconn.model('donatorSchema');
+
+var charityconn = require('../db/charity_db'),
   charity_model = charityconn.model('charitySchema');
 
 
@@ -17,7 +23,7 @@ const saltRounds = 10;
 
 
 function postPass(hashedpass, sendusername, sendtype, res){
-	
+
 	console.log("POSTPASS");
 
 	console.log('hashedpass ', hashedpass);
@@ -33,7 +39,7 @@ function postPass(hashedpass, sendusername, sendtype, res){
   newPassword.save(function(err, post){
     if(err){
       res.status(500).send({
-        status: "Error", 
+        status: "Error",
         error: err
       });
     }else{
@@ -59,7 +65,8 @@ router.post("/signup/charitypost", function(req,res,next){
 
 	var newCharity = new charity_model({
 		name: req.body.name,
-		address: req.body.address
+		address: req.body.address,
+    email: req.body.email
 	});
 
   newCharity.save(function(err, post){
@@ -182,7 +189,7 @@ router.post('/', function(req,res,next){
 	var password = req.body.password;
 	var redirectistrue = false;
 	var numbernomatches = 0;
- 
+
 		password_model.find({}, function(err,posts){
 			postslength = posts.length;
 			posts.forEach(function(post){
@@ -193,7 +200,7 @@ router.post('/', function(req,res,next){
 				if (post.username == req.body.username){
 					bcryptaspromised.compare(req.body.password, post.password)
 							.then(function(result){
-							
+
 								console.log("passwords match!")
 
 								if(post.type == "charity"){
@@ -279,9 +286,9 @@ module.exports = router;
 
 /*
 router.post('/signup', function(req,res,next){
-	
+
 	var promise = new Promise(function(resolve){
-		//resolve(false)			
+		//resolve(false)
 		password_model.find({username: req.body.username}, function(err, post){
 			//res.json({'result': req.body.username});
 			resolve(true);
@@ -333,14 +340,14 @@ router.post('/signup', function(req,res,next){
 				// }
 
 			//});
-		}); 
+		});
 
 
 		// if (foundothername === false){
 		// 	resolve(true);
 		// 	reject(false);
 		// }
-		
+
 		// if (foundothername === true){
 		// 	resolve(false);
 		// 	reject(true);
@@ -351,7 +358,7 @@ router.post('/signup', function(req,res,next){
 
 
 	promise.then(function(resolve, reject){
-		
+
 		if (resolve){
 			bcryptaspromised.hash(req.body.password, saltRounds)
 						.then(function(hash,err){
@@ -472,7 +479,7 @@ router.post('/signup', function(req,res,next){
 				});
 
 
-				
+
 		});
 
 
@@ -523,7 +530,7 @@ router.post('/signup', function(req,res,next){
 
 										if (numberofmismatchpasswords === postslength){
 											postPass(savedhash, req.body.username, res);
-										}	
+										}
 
 									}
 
@@ -532,7 +539,7 @@ router.post('/signup', function(req,res,next){
 							.catch(function(){console.log("some error!");});
 
 					});
-				
+
 				});
 
 		});
@@ -541,7 +548,7 @@ router.post('/signup', function(req,res,next){
 
 */
 
-/* 
+/*
 
 //THIS WAY DOES NOT WORK EITHER :C
 
@@ -562,7 +569,7 @@ function findPass(username, plainpass, callback){
 					passwordMatch = true;
 					usernameMatch = post.username;
 					callback(passwordMatch, usernameMatch, resolvedTrue);
-				} 
+				}
 			});
 
 			if(posts[posts.length-1].username === post.username && posts[posts.length-1].password === post.password){
@@ -582,7 +589,7 @@ function findPass(username, plainpass, callback){
 router.post('/signup', function(req,res,next){
 	bcrypt.hash(req.body.password, saltRounds, function(err, hash){
 		var promise = new Promise(function(resolve, reject){
-			
+
 			findPass(req.body.username, req.body.password, function(passwordMatch, usernameMatch, resolvedTrue) {
 				console.log("in router.post");
 				if (passwordMatch===true && usernameMatch===req.body.username){
@@ -608,7 +615,7 @@ router.post('/signup', function(req,res,next){
 				console.log("new username password added to database")
 			}else{
 				console.log("cant add to database, username and password already exist");
-			}	
+			}
 
 		}, function(err){console.log(err);});
 
@@ -653,13 +660,13 @@ function findPass(plainpass, username, callback){
 						console.log("res==true");
 						passwordMatch = true;
 						usernameMatch = post.username;
-					} 
+					}
 
 					callback(passwordMatch, usernameMatch);
 
 				});
 
-				
+
 			});
 	});
 
@@ -671,7 +678,7 @@ function findPass(plainpass, username, callback){
 
 router.post('/signup', function(req,res,next){
 
-	var canaddtodatabase = false;	
+	var canaddtodatabase = false;
 	var passwordstore = req.body.password;
 	var usernamestore = req.body.username;
 
@@ -688,7 +695,7 @@ router.post('/signup', function(req,res,next){
 				console.log("true");
 				canaddtodatabase = true;
 			}
-		});		
+		});
 
 		//console.log("canadd before if ", canaddtodatabase);
 		//console.log("usernameMatch ", usernameMatch, " usernamestore ", usernamestore);
@@ -703,7 +710,7 @@ router.post('/signup', function(req,res,next){
 			console.log("cant add to database, username and password already exist");
 		}
 
-	});	
+	});
 
 });
 */
@@ -728,7 +735,7 @@ router.post('/',function(req,res,next){
   newPassword.save(function(err, post){
     if(err){
       res.status(500).send({
-        status: "Error", 
+        status: "Error",
         error: err
       });
     }else{
@@ -749,7 +756,7 @@ router.delete('/',function(req,res,next){
 
     res.json({
       status: "deleted!",
-      post: post  
+      post: post
     });
   });
 });

@@ -9,7 +9,7 @@ header {
 
 h1 {
   color: #FFFFFF;
-  font-family:  Arial-Black;
+  font-family:  Arial;
   font-size: 36px;
 }
 
@@ -50,6 +50,13 @@ nav ul li, .social-media li {
   /*line 19px (1.4) also from UX?*/
 }
 
+.contact-button:hover{
+    background-color: #8bc67d;
+}
+
+button#sign-in:hover {
+    background-color: #8bc67d;
+}
 
 /*HEADER*/
 
@@ -68,7 +75,7 @@ nav ul{
 
 nav ul li {
   color: #757575;
-  font-family: Arial-BoldMT;
+  font-family: Arial;
   font-size: 14px;
   margin: 4%;
 }
@@ -80,25 +87,59 @@ nav ul li:last-child{
 
 nav ul li a{
   color: #757575;
-  font-family: Arial-BoldMT;
+  font-family: Arial;
   font-size: 14px;
 }
+/*Profile Drop down button for signing out*/
+.dropbtn {
+    /*padding: 16px;
+    font-size: 16px;*/
+    border: none;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #00B7D1;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+  background-color: #00B7D1
+}
+.show {
+  display:block;
+}
+
+
 
 /*FORMS*/
 form {
   background-color: #FFFFFF;
   color: #9B9B9B;
-  font-family: Arial-BoldMT;
+  font-family: Arial;
   font-size: 12px;
-  radius: 5px;
+  border-radius: 5px;
 }
 form h2 {
   color: #00B7D1;
-  font-family: Arial-Black;
+  font-family: Arial;
   font-size: 36px;
 }
 form input {
-  radius: 5px;
+  border-radius: 5px;
 }
 
 /*JOIN NOW BAR*/
@@ -126,7 +167,7 @@ form input {
 
 /*PROFILE SIDEBAR*/
 .greetings {
-  font-family: ArialMT;
+  font-family: Arial;
   font-size: 36px;
   width: 100%;
   background-color: #9DD3E0;
@@ -161,7 +202,7 @@ form input {
 
 .profile-sidebar{
   background-color: #00B7D1;
-  font-family: Arial-BoldMT;
+  font-family: Arial;
   height: 100%;
   padding-bottom: 100%;
   padding-left: 0;
@@ -196,7 +237,6 @@ form input {
   text-align: center;
 }
 
-
 /*FOOTER*/
 footer{
   background-color: #616161;
@@ -205,7 +245,6 @@ footer{
 .footer-container {
   background-color: #616161;
   color: #FFFFFF;
-  /*font-family: ArialMT;*/
   font-weight: 100;
   letter-spacing: 1px;
   font-size: 10px;
@@ -214,7 +253,6 @@ footer{
 
 .footer-links a {
   color: #FFFFFF;
-  /*font-family: Arial-BoldMT;*/
   font-weight: 500;
 }
 

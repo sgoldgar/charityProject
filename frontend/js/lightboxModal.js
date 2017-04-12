@@ -45,13 +45,13 @@ $(document).ready(function(){
 		window.location.href='profileEdit.html';
 	});
 
-	// $('#joinUp').click(function(e){
-	// 	e.preventDefault();
-	// 	$('#joinUpPopup').modal('hide');
-	// 	// $('#sign-in').hide();
-	// 	// $('.dropButton').show();
-	// 	window.location.href='donorProfile.html';
-	// });
+	$('#joinUp').click(function(e){
+		e.preventDefault();
+		$('#joinUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='donorProfile.html';
+	});
 
 	$('.close').click(function(e){
 		e.preventDefault();
@@ -65,17 +65,29 @@ $(document).ready(function(){
 
 	});
 
-	$('.modal-backdrop.in').click(function(e){
-		console.log('clicked outside');
-		$('#signUpPopup').modal('hide');
-		$('#logInPopup').modal('hide');
 
-		$('#donatePopup').modal('hide');
+// function personalizeProfile(profile){
+    
+//     var url = 'http://localhost:5000/donator_routes';
+//     var data = {
+//      	name: name,
+//      // img: img
+//    };
 
-		$('#joinUpPopup').modal('hide');
-		$('#contactPopup').modal('hide');
-	})
+//    var personalize = $.ajax({
+//    type: 'GET',
+//    url: url,
+//    data: data
+//     });
+
+//     personalize.done(function(response){
+//         console.log('response: ', response);
 
 
+//      });
+//     }
 
-});
+
+//     personalizeProfile();
+
+// });
