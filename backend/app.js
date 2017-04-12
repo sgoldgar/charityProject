@@ -20,6 +20,7 @@ var index = require('./routes/index');
 var charity_routes = require('./routes/charity_routes');
 var donator_routes = require('./routes/donator_routes');
 var login_routes = require('./routes/login_routes');
+var charity_profile = require('./routes/charity_profile');
 
 
 var app = express();
@@ -42,7 +43,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});  
+});
 */
 
 
@@ -52,6 +53,7 @@ app.use('/', index);
 app.use('/login', login_routes);
 app.use('/charityportal', charity_routes);
 app.use('/donatorportal', donator_routes);
+app.use('/charityprofile', charity_profile);
 
 
 var http = require('http');
