@@ -65,6 +65,17 @@ $(document).ready(function(){
 
 	});
 
+	$('.modal-backdrop.in').click(function(e){
+		console.log('clicked outside');
+		$('#signUpPopup').modal('hide');
+		$('#logInPopup').modal('hide');
+
+		$('#donatePopup').modal('hide');
+
+		$('#joinUpPopup').modal('hide');
+		$('#contactPopup').modal('hide');
+	})
+
 
 
 });
