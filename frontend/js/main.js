@@ -1,5 +1,13 @@
-//profile sign out dropdown
 
+console.log('all ready');
+
+
+$(function() {
+   console.log( "test!");
+
+});
+
+//profile drop down
 function myFunction() {
     $("#myDropdown").classList.toggle("show");
 }
@@ -19,7 +27,7 @@ window.onclick = function(event) {
       }
     }
   }
-}
+};
 //
 // $('.drpbtn').hover(function(e){
 //   $('#myDropdown').toggle()
@@ -35,3 +43,30 @@ window.onclick = function(event) {
 //
 // }
 // })
+
+// personalize sidebar
+function personalizeProfile(){
+
+    var url = 'http://localhost:3000/donorprofile';
+    var data = {
+     	name: name,
+     // img: img
+   };
+
+   var personalize = $.ajax({
+   type: 'GET',
+   url: url,
+   data: data
+    });
+
+    personalize.done(function(response){
+        console.log('response: ', response);
+
+
+     });
+    }
+
+
+    personalizeProfile();
+
+});

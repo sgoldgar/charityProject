@@ -6,7 +6,7 @@ var donatorconn = require('../db/donator_db'),
   donator_model = donatorconn.model('donatorSchema');
   console.log('test');
 
-router.patch('/donorprofile', function(req, res, next) {
+router.get('/donorprofile', function(req, res, next) {
    donator_model.findByOne({email: req.body.email}, function(err, name) {
      if (err) console.log(err);
 

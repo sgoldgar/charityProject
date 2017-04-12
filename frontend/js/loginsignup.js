@@ -42,6 +42,7 @@ $(function(){
 
 
 	function pushdonatorinfo(){
+		console.log('got to pushdonatorinfo');
 		var url = 'http://localhost:3000/login/signup/donatorpost';
 
 		var name = $('.donorname').val();
@@ -127,10 +128,10 @@ $(function(){
 
 				alert('user succesfully added to the db');
 				if (type === "charity"){
-					pushcharityinfo();	
+					pushcharityinfo();
 				}else if (type === "donator"){
 					pushdonatorinfo();
-				}					
+				}
 
 			}
 			if (response.status==='reject'){
@@ -167,4 +168,3 @@ $(function(){
 			}
 	});
 })
-
