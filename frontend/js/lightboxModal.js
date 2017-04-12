@@ -66,28 +66,28 @@ $(document).ready(function(){
 	});
 
 
-// function personalizeProfile(profile){
-    
-//     var url = 'http://localhost:5000/donator_routes';
-//     var data = {
-//      	name: name,
-//      // img: img
-//    };
+function personalizeProfile(profile){
 
-//    var personalize = $.ajax({
-//    type: 'GET',
-//    url: url,
-//    data: data
-//     });
+    var url = 'http://localhost:3000/donator_routes';
+    var data = {
+     	name: name,
+     // img: img
+   };
 
-//     personalize.done(function(response){
-//         console.log('response: ', response);
+   var personalize = $.ajax({
+   type: 'GET',
+   url: url,
+   data: data
+    });
 
-
-//      });
-//     }
+    personalize.done(function(response){
+        console.log('response: ', response);
 
 
-//     personalizeProfile();
+     });
+    }
 
-// });
+
+    personalizeProfile();
+
+});
