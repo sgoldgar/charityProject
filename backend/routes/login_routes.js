@@ -3,7 +3,9 @@ var router = express.Router();
 
 var passwordconn = require('../db/password_db'), 
   password_model = passwordconn.model('passwordSchema');
-
+  
+var donatorconn = require('../db/donator_db'), 
+  donator_model = donatorconn.model('donatorSchema');
 
 var charityconn = require('../db/charity_db'), 
   charity_model = charityconn.model('charitySchema');
@@ -46,24 +48,6 @@ function postPass(hashedpass, sendusername, sendtype, res){
 }
 
 
-// var mongoose = require('mongoose');
-
-// var charitySchema = new mongoose.Schema({
-// 	name: { type: String, required: true },
-// 	description: { type: Array, required: false},
-// 	number: { type: String, required: false},
-// 	img: {type: String, required: false},
-// 	website: {type: String, required:false},
-// 	address: {type: String, required: false},
-// 	hours: {type: String, required: false},
-// 	needs: []
-// });
-
-// var charity = mongoose.model('charitySchema', charitySchema);
-
-// module.exports = charity;
-
-
 
 
 router.post("/signup/charitypost", function(req,res,next){
@@ -93,6 +77,60 @@ router.post("/signup/charitypost", function(req,res,next){
     }
   });
 });
+
+
+
+		// var name = $('.donorname').val();
+		// var username = $('.donoremail').val();
+		// var email = $('.donoremail').val();
+
+		// var data3 = {
+		// 	name: name,
+		// 	username: username,
+		// 	email: email
+		// }
+
+
+
+
+
+router.post("/signup/donatorpost", function(req,res,next){
+
+	console.log('made it inside donatorpost');
+	//console.log('req ', req);
+	//console.log('req.body.name ', req.body.name, ' req.body.address ', req.body.address);
+	//console.log('req.name ', req.name, " req.name ", req.name);
+
+	console.log('req.body.name ', req.body.name, ' req.body.username ', req.body.username, ' req.body.email ', req.body.email);
+
+
+	var newDonator = new donator_model({
+		name: req.body.name,
+		username: req.body.username,
+		email: req.body.email
+	});
+
+  newDonator.save(function(err, post){
+    if(err){
+      console.log("shiterror: ", err);
+      res.status(500).send({
+        status: "Error", 
+        error: err
+      });
+    }else{
+      res.status(200).json({
+        status: "ok",
+        post: post
+      });
+    }
+  });
+});
+
+
+
+
+
+
 
 
 
