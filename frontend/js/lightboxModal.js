@@ -88,31 +88,3 @@ $(document).ready(function(){
 		$('#contactPopup').modal('hide');
 
 	});
-
-
-// function personalizeProfile(){
-
-//     var url = 'http://localhost:3000/donorprofile';
-//     var data = {
-//      	name: name,
-//      // img: img
-//    };
-
-//    var personalize = $.ajax({
-//    type: 'GET',
-//    url: url,
-//    data: data
-//     });
-
-//     personalize.done(function(response){
-//         console.log('response: ', response);
-
-
-//      });
-//     }
-
-
-//     personalizeProfile();
-
-
-});
