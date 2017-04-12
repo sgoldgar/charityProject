@@ -104,11 +104,12 @@ function findNeeds(needs){
 
    //loop through array of responses to query and append onto page
    for (var j=0; j<response.length; j++){
-     charities.push(charity.name) //add charity to charities array
+     console.log('Charity Name is ' + response[j].name); //check charity name
+     charities.push(response[j].name) //add charity to charities array
      /*Check to see if charity matches one already returned in results*/
      for (var k = 0; k < charities.length; k++) {
        /*If it matches move on*/
-       if (charity.name === charities[k]){
+       if (response[j].name === charities[k]){
          continue
        }
        /*Otherwise add it to search results*/
@@ -116,21 +117,21 @@ function findNeeds(needs){
          $('.search-results-container').append(  //need to add search-results-container to HTML
            '<div class="result-container">' + //make a div to contain a single result
              /*APPEND CHARITY NAME*/
-             '<h3 class="inner-title">' + /*var name of charity*/ +'</h3>' +
+             '<h3 class="inner-title">' + response[j].name +'</h3>' +
              /*APPEND CHAIRITY LOGO*/
              '<div class="col-md-4 col-sm-4 col-xs-4">' +
-               '<img class="charity-logo" src="' + /*var name of charity logo*/ +'" alt="' + /*charity name*/ + ' logo">' +
+               '<img class="charity-logo" src="' + response[j].img +'" alt="' + response[j].name + ' logo">' +
              '</div>' +
              /*APPEND CHARITY HOURS*/
              '<div class="col-md-4 col-sm-4 col-xs-4">' +
                '<div class="hours">' +
                  '<p>Hours:</p>' +
-                 '<p>'+ /*var charity hours*/ + '</p>' +
+                 '<p>'+ response[j].hours + '</p>' +
                '</div>' +
              /*APPEND CHARITY ADDRESS*/
                '<div class="address">' +
                  '<p>Address:</p>' +
-                 '<p>' + /*var for charity address + city + state + zip */ + '</p>' +
+                 '<p>' + response[j].streetAddress + ', '+ response[j].city + ', ' + response[j].state + ', ' + response[j].zip + '</p>' +
                '</div>' +
              /*APPEND NEEDS*/
                '<div class="needs-text">' +
@@ -147,17 +148,14 @@ function findNeeds(needs){
            );
 
          //find the ul called needs text created in previous loop and append list items with needs
-         for(var i=0; i<response.needs.length; i++){ //not sure if response.needs.length is correct call
+         for(var i=0; i<response[j].needs.length; i++){ //not sure if response.needs.length is correct call
            $(".needs-text").append(
-             '<li>' + response.needs[i] + '</li>'
+             '<li>' + response[j].needs[i] + '</li>'
            );
          }; //end ul for loop
        }; //end else statement
      }; //end charity for loop
    }; //end response for loop
  }); //end charitySearchResults.done
-
- });
-
 
 };
