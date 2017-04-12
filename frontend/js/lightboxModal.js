@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 		// there will be more to this when ajax call introduced
 
-	$('.logIn').click(function(e){
+	$('#googleLogSocial').click(function(e){
 		e.preventDefault();
 		$('#logInPopup').modal('hide');
 		// $('#sign-in').hide();
@@ -37,7 +37,23 @@ $(document).ready(function(){
 		// window.location.href='charityProfile.html';
 	});
 
-	$('#signUp').click(function(e){
+	$('#facebookLogSocial').click(function(e){
+		e.preventDefault();
+		$('#logInPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='charityProfile.html';
+	});
+
+	$('#googleSignSocial').click(function(e){
+		e.preventDefault();
+		$('#signUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='profileEdit.html';
+	});
+
+	$('#facebookSignSocial').click(function(e){
 		e.preventDefault();
 		$('#signUpPopup').modal('hide');
 		// $('#sign-in').hide();
@@ -45,7 +61,15 @@ $(document).ready(function(){
 		// window.location.href='profileEdit.html';
 	});
 
-	$('#joinUp').click(function(e){
+	$('#googleJoinSocial').click(function(e){
+		e.preventDefault();
+		$('#joinUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='donorProfile.html';
+	});
+
+	$('#facebookJoinSocial').click(function(e){
 		e.preventDefault();
 		$('#joinUpPopup').modal('hide');
 		// $('#sign-in').hide();
@@ -65,29 +89,4 @@ $(document).ready(function(){
 
 	});
 
-
-// function personalizeProfile(){
-//
-//     var url = 'http://localhost:3000/donorprofile';
-//     var data = {
-//      	name: name,
-//      // img: img
-//    };
-//
-//    var personalize = $.ajax({
-//    type: 'PATCH',
-//    url: url,
-//    data: data
-//     });
-//
-//     personalize.done(function(response){
-//         console.log('response: ', response);
-//
-//
-//      });
-//     }
-//
-//
-//     // personalizeProfile();
-//
 });
