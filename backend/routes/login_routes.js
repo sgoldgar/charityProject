@@ -3,6 +3,12 @@ var router = express.Router();
 
 var passwordconn = require('../db/password_db'),
   password_model = passwordconn.model('passwordSchema');
+  
+var donatorconn = require('../db/donator_db'), 
+  donator_model = donatorconn.model('donatorSchema');
+
+var charityconn = require('../db/charity_db'), 
+  charity_model = charityconn.model('charitySchema');
 
 var donatorconn = require('../db/donator_db'),
   donator_model = donatorconn.model('donatorSchema');
@@ -67,7 +73,7 @@ router.post("/signup/charitypost", function(req,res,next){
     if(err){
       console.log("shiterror: ", err);
       res.status(500).send({
-        status: "Error",
+        status: "Error", 
         error: err
       });
     }else{
@@ -115,7 +121,7 @@ router.post("/signup/donatorpost", function(req,res,next){
     if(err){
       console.log("shiterror: ", err);
       res.status(500).send({
-        status: "Error",
+        status: "Error", 
         error: err
       });
     }else{

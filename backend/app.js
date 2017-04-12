@@ -1,10 +1,10 @@
-require('dotenv').config({silent: true});
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
 var cors = require('cors');
 var chat = require('./routes/chat');
 var mongoose = require('mongoose');
@@ -36,6 +36,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(cors());
 
 /*
@@ -62,6 +63,7 @@ var io = require('socket.io').listen(server);
 app.use('/static', express.static('node_modules'));
 server.listen(8080);
 chat(app,io);
+
 
 
 // catch 404 and forward to error handler
