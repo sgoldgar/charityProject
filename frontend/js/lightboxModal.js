@@ -66,9 +66,9 @@ $(document).ready(function(){
 	});
 
 
-function personalizeProfile(profile){
+function personalizeProfile(){
 
-    var url = 'http://localhost:3000/donator_routes';
+    var url = 'http://localhost:3000/donorprofile';
     var data = {
      	name: name,
      // img: img
