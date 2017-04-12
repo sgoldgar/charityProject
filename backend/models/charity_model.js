@@ -12,6 +12,7 @@ var charitySchema = new mongoose.Schema({
 	streetAddress: {type: String, required: false},
 	city: {type: String, required: false},
 	state: {type: String, required: false},
+	email: {type: String, required: false},
 	zip: {type: String, required: false},
 	hours: {type: String, required: false},
 	needs : { type : Array , "default" : [], required:false }
