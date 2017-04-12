@@ -26,9 +26,9 @@ $(function(){
 				alert("password or username is not correct");
 			}else{
 				if (response.goto==='charityportal'){
-					window.location.href = 'http://localhost:5000/charityProfile.html';
-				}else if (response.goto===''){
-					window.location.href = 'http://localhost:5000/donorProfile.html';
+					window.location.href = 'charityProfile.html';
+				}else if (response.goto==='donatorportal'){
+					window.location.href = 'donorProfile.html';
 				}
 			}
 		});
@@ -37,27 +37,34 @@ $(function(){
 
 
 
+	function pushdonatorinfo(){
+		var url = 'http://localhost:3000/login/signup/donatorpost';
+		
+		var name = $('.donorname').val();
+		var username = $('.donoremail').val();
+		var email = $('.donoremail').val();
 
-// var mongoose = require('mongoose');
+		var data3 = {
+			name: name,
+			username: username,
+			email: email
+		}
 
-// var charitySchema = new mongoose.Schema({
-// 	charityName: { type: String, required: false },
-// 	bio: { type: Array, required: false},
-// 	phoneNumber: { type: String, required: false},
-// 	profileManager: {type: String, required: false},
-// 	img: {type: String, required: false},
-// 	website: {type: String, required:false},
-// 	streetAddress: {type: String, required: false},
-// 	city: {type: String, required: false},
-// 	state: {type: String, required: false},
-// 	zip: {type: String, required: false},
-// 	hours: {type: String, required: false},
-// 	needs : { type : Array , "default" : [], required:false }
-// });
+		var pushdonator = $.ajax({
+    		type:"POST",
+    		url:url,
+    		data: data3
+    	},
+   		console.log(data3));
 
-// var charity = mongoose.model('charitySchema', charitySchema);
+		pushdonator.done(function(response){
+			//console.log('donatorpushYATA ', response);
+			window.location.href='donorProfile.html';
+		});
 
-// module.exports = charity;
+	}
+
+
 
 
     function pushcharityinfo(){
@@ -83,10 +90,11 @@ $(function(){
    		console.log(data2));
 
     	pushcharity.done(function(response){
-    		console.log("charitypatchYATA ", response);
-    		window.location.href = 'http://localhost:5000/charityProfile.html'
+    		console.log("charitypushYATA ", response);
+    		window.location.href = 'charityProfile.html'
     	});
     }
+
 
 
 	function signup(username, password, type){
@@ -106,9 +114,13 @@ $(function(){
 
 		pushsignup.done(function(response){
 			console.log("signupYATA", response);
-			if (response.status==='ok' && type==="charity"){
+			if (response.status==='ok'){
 				alert('user succesfully added to the db');
-				pushcharityinfo();	
+				if (type === "charity"){
+					pushcharityinfo();	
+				}else if (type === "donator"){
+					pushdonatorinfo();
+				}					
 			}
 			if (response.status==='reject'){
 				alert('username already taken, please choose another');
@@ -135,6 +147,13 @@ $(function(){
 			if($(".charitypassword").val()===$(".charityconfirmpassword").val() && $(".charityemail").val()!="" && $(".charitypassword").val()!=""){
 				signup($(".charityemail").val(), $(".charitypassword").val(), "charity");
 			}
-	})	
+	});
 
+	$('#donorsubmitform').on("submit", function(e){
+		e.preventDefault();
+			if($('.donorpassword').val()===$('.donorconfirmpassword').val() && $('.donoremail').val()!="" && $('.donorconfirmpassword').val()!=""){
+				signup($(".donoremail").val(), $(".donorpassword").val(), "donator");
+			}
+	});
 })
+   
