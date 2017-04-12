@@ -3,12 +3,16 @@
 var mongoose = require('mongoose');
 
 var charitySchema = new mongoose.Schema({
-	name: { type: String, required: false },
-	description: { type: Array, required: false},
-	number: { type: String, required: false},
+	charityName: { type: String, required: false },
+	bio: { type: Array, required: false},
+	phoneNumber: { type: String, required: false},
+	profileManager: {type: String, required: false},
 	img: {type: String, required: false},
 	website: {type: String, required:false},
-	address: {type: String, required: false},
+	streetAddress: {type: String, required: false},
+	city: {type: String, required: false},
+	state: {type: String, required: false},
+	zip: {type: String, required: false},
 	hours: {type: String, required: false},
 	needs : { type : Array , "default" : [], required:false }
 });

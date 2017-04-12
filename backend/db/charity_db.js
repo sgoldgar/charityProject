@@ -10,13 +10,14 @@ var mongoose = require('mongoose'),
 
 
 
+
 charity_conn = mongoose.createConnection(process.env.charity_db_conn);
 
 charity_conn.on('error', function(err){
   if(err){
   	throw err;
   	console.log(charity_conn);
-  } 
+  }
 });
 
 charity_conn.once('open', function callback () {
