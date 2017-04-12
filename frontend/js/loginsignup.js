@@ -22,9 +22,15 @@ $(function(){
 
 		pushlogin.done(function(response){
 			console.log("loginYATA", response.goto);
+
+
 			if (response.goto==="passwordsdontmatch"){
 				alert("password or username is not correct");
 			}else{
+				
+				//the following localstorage set is to identify users in chat
+				localStorage.setItem('username', username);
+
 				if (response.goto==='charityportal'){
 					window.location.href = 'charityProfile.html';
 				}else if (response.goto==='donatorportal'){
@@ -115,6 +121,9 @@ $(function(){
 		pushsignup.done(function(response){
 			console.log("signupYATA", response);
 			if (response.status==='ok'){
+
+				localStorage.setItem('username', username);
+
 				alert('user succesfully added to the db');
 				if (type === "charity"){
 					pushcharityinfo();	
