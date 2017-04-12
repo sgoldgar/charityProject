@@ -45,13 +45,13 @@ $(document).ready(function(){
 		window.location.href='profileEdit.html';
 	});
 
-	// $('#joinUp').click(function(e){
-	// 	e.preventDefault();
-	// 	$('#joinUpPopup').modal('hide');
-	// 	// $('#sign-in').hide();
-	// 	// $('.dropButton').show();
-	// 	window.location.href='donorProfile.html';
-	// });
+	$('#joinUp').click(function(e){
+		e.preventDefault();
+		$('#joinUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		window.location.href='donorProfile.html';
+	});
 
 	$('.close').click(function(e){
 		e.preventDefault();
@@ -65,6 +65,27 @@ $(document).ready(function(){
 
 	});
 
+function personalizeProfile(profile){
+    
+    var url = 'http://localhost:5000/donator_routes/profile';
+    var data = {
+     name: name,
+     // img: img
+   };
 
+    var personalize = $.ajax({
+   type: 'GET',
+   url: url,
+   data: data
+    });
+
+    personalize.done(function(response){
+        console.log('response: ', response);
+
+
+     });
+    }
+
+    personalizeProfile();
 
 });

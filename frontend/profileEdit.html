@@ -102,11 +102,13 @@
               <!-- Organization Name -->
               <div>
 
-                <label for="charityName">Organization Name</label><br>
-                <input type="text" id="orgName" name="charityName" required>
-                <label>What do you need?</label>
-                <select name="needs">
-                    <option selected>Needs</option>
+
+                  <label for="charityName">Organization Name</label><br>
+                  <input type="text" id="orgName" name="charityName" required>
+                  <label>What do you need?</label>
+                  <select name="needs">
+                    <option selected>---</option>
+
                     <option value="householdGoods">Household Goods</option>
                     <option value="money">Money</option>
                     <option value="dryGoods">Dry Goods</option>
@@ -180,14 +182,15 @@
                   </select>
 
 
-                <input type="text" id="zip" placeholder="Zip Code" name="zip" required><br>
-                <label for="phoneNumber">Phone Number</label>
-                <label for="hours">Hours of Operation</label><br>
+                  <input type="text" id="zip" placeholder="Zip Code" name="zip" required><br>
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" id="phoneNumber" name="phoneNumber">
+                  <label for="hours">Hours of Operation</label>
 
-                <input type="text" id="hours" name="hours">
-                <label for="website">Company Website</label>
-                <input type="text" id="website" name="website">
-              </div>
+                  <input type="text" id="hours" name="hours"><br>
+                  <label for="website">Company Website</label>
+                  <input type="text" id="website" name="website">
+                </div>
 
 
               <!-- Text box for company bio -->
@@ -216,9 +219,12 @@
 
               <br><br>
 
-              <button class="button" type="Submit" name="saveChanges">Save Changes</button>
-            </form>
-          </section>
+
+                <button class="saveProfile" type="Submit" name="saveChanges">Save Changes</button>
+              </form>
+            </section>
+          </div>
+
         </div>
       </div>
 
@@ -303,7 +309,6 @@
                     <input class="cb" type="checkbox"><span>Willing to pick up</span>
                   </label>
             </div>
-
             <label>Special Notes</label>
             <textarea name="notes" rows="8" cols="80"></textarea>
             <label>Add Tags</label>
@@ -315,12 +320,13 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <!-- Bootstrap JS CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/lightboxModal.js"></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/lightboxModal.js"></script>
+    <script type="text/javascript" src=js/profileEdit.js></script>
+  </body>
 </html>
+
