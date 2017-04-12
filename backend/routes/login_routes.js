@@ -3,6 +3,12 @@ var router = express.Router();
 
 var passwordconn = require('../db/password_db'), 
   password_model = passwordconn.model('passwordSchema');
+  
+var donatorconn = require('../db/donator_db'), 
+  donator_model = donatorconn.model('donatorSchema');
+
+var charityconn = require('../db/charity_db'), 
+  charity_model = charityconn.model('charitySchema');
 
 
 var bcryptaspromised = require('bcrypt-as-promised');
@@ -40,6 +46,91 @@ function postPass(hashedpass, sendusername, sendtype, res){
 
 
 }
+
+
+
+
+router.post("/signup/charitypost", function(req,res,next){
+
+	console.log('made it inside charitypost');
+	//console.log('req ', req);
+	console.log('req.body.name ', req.body.name, ' req.body.address ', req.body.address);
+	console.log('req.name ', req.name, " req.name ", req.name);
+
+	var newCharity = new charity_model({
+		name: req.body.name,
+		address: req.body.address
+	});
+
+  newCharity.save(function(err, post){
+    if(err){
+      console.log("shiterror: ", err);
+      res.status(500).send({
+        status: "Error", 
+        error: err
+      });
+    }else{
+      res.status(200).json({
+        status: "ok",
+        post: post
+      });
+    }
+  });
+});
+
+
+
+		// var name = $('.donorname').val();
+		// var username = $('.donoremail').val();
+		// var email = $('.donoremail').val();
+
+		// var data3 = {
+		// 	name: name,
+		// 	username: username,
+		// 	email: email
+		// }
+
+
+
+
+
+router.post("/signup/donatorpost", function(req,res,next){
+
+	console.log('made it inside donatorpost');
+	//console.log('req ', req);
+	//console.log('req.body.name ', req.body.name, ' req.body.address ', req.body.address);
+	//console.log('req.name ', req.name, " req.name ", req.name);
+
+	console.log('req.body.name ', req.body.name, ' req.body.username ', req.body.username, ' req.body.email ', req.body.email);
+
+
+	var newDonator = new donator_model({
+		name: req.body.name,
+		username: req.body.username,
+		email: req.body.email
+	});
+
+  newDonator.save(function(err, post){
+    if(err){
+      console.log("shiterror: ", err);
+      res.status(500).send({
+        status: "Error", 
+        error: err
+      });
+    }else{
+      res.status(200).json({
+        status: "ok",
+        post: post
+      });
+    }
+  });
+});
+
+
+
+
+
+
 
 
 
@@ -95,6 +186,9 @@ router.post('/', function(req,res,next){
 		password_model.find({}, function(err,posts){
 			postslength = posts.length;
 			posts.forEach(function(post){
+
+				//console.log("post ", post);
+				//console.log("req.body.username ", req.body.username, " req.body.password ", req.body.password);
 
 				if (post.username == req.body.username){
 					bcryptaspromised.compare(req.body.password, post.password)

@@ -48,7 +48,8 @@
 
           <div class="row search-items">
             <div class="searchHeadText">
-            <h2>Search donation types to find a local charity that needs your help!</h2>
+
+            <h3>Search donation types to find a local charity that needs your help!</h3>
             <p>Click on your contribution(s) and then the search icon to get a listings from local charities.</p>
             <br/>
             </div>
@@ -135,23 +136,23 @@
       <!-- Join now lightbox for donor reg -->
      <div class="modal fade popUpModal container" id="joinUpPopup" role="dialog">
           <div class="modal-dialog">
-          <div class="row">
+            <div class="row">
               <div class="modal-header popUpHeader col-xs-8 col-md-6">
-                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
                 <h2 class="popUp">Sign Up</h2>
               </div>
+              <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
             </div>
             <div class="row">
               <div class="modal-body popUpForm col-xs-8 col-md-6">
-                <form>
+                <form id="donorsubmitform">
                 <label>Name</label>
-                <input type="text" name="name">
+                <input class="donorname" type="text" name="name">
                 <label>Email (your new username)</label>
-                <input type="text" name="email">
+                <input class="donoremail" type="text" name="email">
                 <label>Password</label>
-                <input type="text" name="password">
+                <input class="donorpassword" type="text" name="password">
                 <label>Confirm Password</label>
-                <input type="text" name="confirmPassword">
+                <input class="donorconfirmpassword" type="text" name="confirmPassword">
                 <button id="joinUp" type="submit" name="joinUp">Sign Up</button>
                 <p class="OR">OR</p>
                  <div class="modal-footer popUpFooter col-xs-8 col-md-6">
@@ -172,11 +173,13 @@
     <!-- THIS IS A PLACEHOLDER FOR AUTH0 AUTH -->
       <div class="modal fade popUpModal container" id="logInPopup" role="dialog">
           <div class="modal-dialog">
-          <div class="row">
+
+            <div class="row">
               <div class="modal-header popUpHeader col-xs-8 col-md-6">
-                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
                 <h2 class="popUp">Sign In</h2>
               </div>
+              <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+
             </div>
             <div class="row">
               <div class="modal-body popUpForm col-xs-8 col-md-6">
@@ -209,5 +212,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/donorSearch.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/lightboxModal.js"></script>
+    <script src='js/loginsignup.js' type="text/javascript"></script>
   </body>
 </html>
