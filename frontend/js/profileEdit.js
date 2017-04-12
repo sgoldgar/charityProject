@@ -7,28 +7,31 @@ $(function() {
 });
 
 // submitting form for profile
-$(".donate").on('click', function(){
+$(".saveProfile").on('click', function(){
   // event.preventDefault();
 
   });
 
 
 // ajax call to database to show saved charity profile info
-  function findCharity(needs) {
+  function update() {
 
-    var url= 'http:localhost:3000/charity_profile/profile';
+    var url= 'http:localhost:3000/charityprofile';
     console.log('url', url);
     data = {
-      needs: needs
+      profileManager : profileManger,
+      charityname : charityName,
+      adress : streetAddress,
+      email : email
     };
 
-    var completeProfile = $.ajax({
+    var updateProfile = $.ajax({
       url: url,
       type: "GET",
       data: data
     }, console.log('url', url));
 
-    completeProfile.done(function(response){
+    updateProfile.done(function(response){
       console.log('find needs', response);
     });
 
