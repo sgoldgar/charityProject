@@ -65,6 +65,7 @@ $(document).ready(function(){
 
 	});
 
+
 // function personalizeProfile(profile){
     
 //     var url = 'http://localhost:5000/donator_routes';
@@ -85,6 +86,7 @@ $(document).ready(function(){
 
 //      });
 //     }
+
 
 //     personalizeProfile();
 

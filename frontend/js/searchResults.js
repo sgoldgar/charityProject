@@ -26,8 +26,6 @@ $(document).ready(function(){
 
       getCharityResults.done(function(response){
 
-        /*SET BACKGROUND TO WHITE*/
-
         var charities = [];
 
         //loop through array of responses to query and append onto page
@@ -66,9 +64,7 @@ $(document).ready(function(){
                       '</ul>' +
                   /*APPEND EMAIL BUTTON*/
                   '<div class="col-md-4 col-sm-4 col-xs-4">' +
-                    '<button class="contact-button" id="contactUs">' +
                       '<img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon">' +
-                    '</button>' +
                   '</div>' +
                 /*END CONTAINER*/
                 '</div>'

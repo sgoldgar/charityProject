@@ -33,66 +33,60 @@
           </nav>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
 
-  <!-- The main section goes here. -->
-  <main>
-    <div class="container main-container">
-      <div class="row main-row">
-        <!-- left side bar, doesn't change -->
-        <div class="col-md-4 col-sm-12 col-xs-12 ">
-          <!-- main greeting -->
-          <div class="greetings">
-            <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
-            <div class="greeting-container">
-              <h2>Greetings <br><span>NAME!</span></h2>
-            </div>
-            <div class="greeting-image-container">
-              <img src="assets/Profile-Icon.svg" alt="profile-picture">
-            </div>
-          </div>
+    <!-- The main section goes here. -->
+    <main>
+      <div class="container main-container">
+        <div class="row main-row">
+          <!-- left side bar, doesn't change -->
+          <div class="col-md-4 col-sm-12 col-xs-12 ">
+            <!-- main greeting -->
+            <div class="greetings">
+              <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
+              <div class="greeting-container">
+                <h2>Greetings <br><span>NAME!</span></h2>
+              </div>
+              <div class="greeting-image-container">
+                <img src="assets/Profile-Icon.svg" alt="profile-picture">
+              </div>
+           </div>
 
-          <ul class="profile-sidebar">
+            <ul class="profile-sidebar">
 
 
-            <!-- donations link -->
-            <li>
-              <a href="donationHistory.html">Donations</a>
-            </li>
-            <!-- messages link -->
-            <li>
-              <a href="messages.html">Messages</a>
-            </li>
-            <!-- notifications link -->
-            <li>
-              <a href="#">Notifications</a>
-            </li>
-            <!-- event calendar -->
-            <li>
-              <a href="#">Event Calendar</a>
-            </li>
-            <!-- donation request button -->
-            <li>
-              <button class="donation-button button" id="donate">
-
+              <!-- donations link -->
+              <li>
+                <a href="donationHistory.html">Donations</a>
+                <button class="donation-button button" id="donate">
                   <span class="plus-sign">+<br>
-                  </span> Donation <br>Request
-
+                  </span> Add <br>Request
                 </button>
-            </li>
-          </ul>
-        </div>
-        <!-- main content, changes based on where you navigate -->
-        <div class="col-md-8 col-sm-12 col-xs-12">
-          <h2 class="inner-title">Profile</h2>
-          <section class="inner-content">
-            <form class="profile-edit" action="profile" method="post" data-toggle="validator">
+              </li>
+              <!-- messages link -->
+              <li>
+                <a href="messages.html">Messages</a>
+              </li>
+              <!-- notifications link -->
+              <li>
+                <a href="#">Notifications</a>
+              </li>
+              <!-- event calendar -->
+              <li>
+                <a href="#">Event Calendar</a>
+              </li>
+            </ul>
+          </div>
+          <!-- main content, changes based on where you navigate -->
+          <div class="col-md-8 col-sm-12 col-xs-12">
+            <h2 class="inner-title">Profile</h2>
+            <section class="inner-content">
+              <form class="profile-edit" action="profile" method="post" data-toggle="validator">
 
-              <!-- upload custom profile image -->
-              <!-- <input type="file" name="pic" accept="image/*"> -->
-              <label class="custom-file">
+                <!-- upload custom profile image -->
+                <!-- <input type="file" name="pic" accept="image/*"> -->
+                <label class="custom-file">
                   <input type="file" id="file" class="custom-file-input" name="image">
 
                   <span class="custom-file-control"></span>
@@ -269,18 +263,16 @@
     </div>
   </footer>
 
-  <!-- lightbox popup from charity sign up -->
-  <div class="modal fade popUpModal container" id="donatePopup" role="dialog">
-    <div class="modal-dialog">
-      <div class="row">
-        <div class="modal-header popUpHeader col-xs-8 col-md-6">
 
-
-          <h2 class="popUp">Donation Request</h2>
-        </div>
-        <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
-      </div>
-
+    <!-- lightbox popup from charity sign up -->
+        <div class="modal fade popUpModal container" id="donatePopup" role="dialog">
+          <div class="modal-dialog">
+          <div class="row">
+              <div class="modal-header popUpHeader col-xs-8 col-md-6">
+                <h2 class="popUp">Donation Request</h2>
+                <img class="close" src="assets/x-for-closing-windows.svg" alt="Close with X">
+              </div>
+          </div>
       <div class="row">
         <div class="modal-body popUpForm col-xs-8 col-md-6">
           <form>

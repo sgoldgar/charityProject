@@ -7,7 +7,8 @@ main {
   background-image: url("../assets/Hero-Photo-Cropped.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 110vh;
+  height: 150%;
+  padding-bottom: 10%;
 }
 
 a {
