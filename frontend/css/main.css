@@ -198,6 +198,12 @@ form input {
   max-width: 50%;
   float: right;
   padding-right: 15%;
+  margin-top: -20%;
+}
+
+.charityProfileName p{
+  margin-left: 15%;
+  margin-top: -10%;
 }
 
 .profile-sidebar{
