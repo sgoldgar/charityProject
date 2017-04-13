@@ -82,7 +82,7 @@
             <h2 class="inner-title">Profile</h2>
             <section class="inner-content">
               <div class="form-group row">
-              <form class="profile-edit" data-toggle="validator">
+              <form class="profile-edit" id="onSave" data-toggle="validator">
                 <div class="col-md-4">
                   <!-- upload custom profile image -->
                   <!-- <input type="file" name="pic" accept="image/*"> -->
@@ -98,9 +98,9 @@
                 <div class="col-md-8">
                   <label for="charityName">Organization Name</label>
                   <br>
-                  <input class="form-control" type="text" id="orgName" name="charityName" required>
+                  <input class="form-control saveInput" type="text" id="orgName" name="charityName" required>
                   <label>What do you need?</label>
-                  <select class="form-control" name="needs">
+                  <select class="form-control saveInput" name="needs">
                     <option selected>---</option>
                     <option value="householdGoods">Household Goods</option>
                     <option value="money">Money</option>
@@ -112,15 +112,15 @@
                   <!-- Organization address -->
                   <label for="streetAddress">Organization Address</label>
                   <br>
-                  <input class="form-control" type="text" id="orgAddress" name="streetAddress" required>
+                  <input class="form-control saveInput" type="text" id="orgAddress" name="streetAddress" required>
                   <br>
 
                 </div>
 
                 <div class="col-md-12">
                   <div class="form-inline">
-                    <input class="form-control" type="text" id="city" name="city" placeholder="City" required>
-                    <select class="form-control" id="states" name="state">
+                    <input class="form-control saveInput" type="text" id="city" name="city" placeholder="City" required>
+                    <select class="form-control saveInput" id="states" name="state">
                         <option selected>State</option>
                       	<option value="AL">Alabama</option>
                       	<option value="AK">Alaska</option>
@@ -174,30 +174,30 @@
                       	<option value="WI">Wisconsin</option>
                       	<option value="WY">Wyoming</option>
                       </select>
-                    <input class="form-control" type="text" id="zip" placeholder="5 Digit Zip Code" name="zip" pattern="[0-9]{5}" required>
+                    <input class="form-control saveInput" type="text" id="zip" placeholder="5 Digit Zip Code" name="zip" pattern="[0-9]{5}" required>
                   </div> <!--closes div form-inline-->
                   <br>
                   <label for="phoneNumber">Phone Number</label>
-                      <input class="form-control" type="text" id="phoneNumber" name="phoneNumber">
+                      <input class="form-control saveInput" type="text" id="phoneNumber" name="phoneNumber">
                   <br>
                   <label for="hours">Hours of Operation</label>
-                      <input class="form-control" type="text" id="hours" name="hours">
+                      <input class="form-control saveInput" type="text" id="hours" name="hours">
                   <br>
                   <label for="website">Company Website</label>
-                    <input class="form-control" type="text" id="website" name="website">
+                    <input class="form-control saveInput" type="text" id="website" name="website">
                   <br>
                   <!-- Text box for company bio -->
                   <label for="bio">Company Bio</label>
                   <br>
-                  <textarea id="bio"class="form-control" name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
+                  <textarea id="bio" class="form-control saveInput" name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
                   <br>
                   <!-- Email and Profile admin -->
                   <label  for="profileManager">Profile Manager</label><br>
-                      <input id="profile" class="form-control" type="text" name="profileManager"><br>
+                      <input id="profile" class="form-control saveInput" type="text" name="profileManager"><br>
                   <label for="email">Email Address</label><br>
-                     <input id="emailInput" class="form-control" type="email" name="email" required>
+                     <input id="emailInput" class="form-control saveInput" type="email" name="email" required>
                   <br>
-                  <button class="button" type="submit" name="saveChanges">Save Changes</button>
+                  <button class="button" id="changesSaved" type="submit" name="saveChanges">Save Changes</button>
                 </div> <!--closes class col-md)--> 
               </form>
             </div>

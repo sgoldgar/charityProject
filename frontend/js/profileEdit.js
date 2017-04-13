@@ -166,7 +166,13 @@ function pullcharityinfo(){
     });
 }
 
-
+// This changes the form borders and alerts user to changes in profile
+$('#changesSaved').on('click', function(e){
+  e.preventDefault();
+  console.log('clicked');
+  $('.saveInput').css('border', 'none');
+  $('#changesSaved').text('Changes Saved').css("background-color", "#00B7D1")
+});
 
 function main(){
   
