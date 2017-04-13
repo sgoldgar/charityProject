@@ -23,6 +23,7 @@ h3, .search-items p {
   padding: 20px;
   width: 90%;
   margin-left: 10%;
+  box-shadow: 2px 2px 4px 2px white;
 }
 .group-btns img {
   float: right;
@@ -34,6 +35,18 @@ h3, .search-items p {
 .btn {
   padding-right: 20px;
 }
+
+.btn-primary {
+  box-shadow: 1px 1px 2px 1px lightgrey;
+}
+
+.btn.btn-info.submitSearch{
+  background-color: white;
+  border: 1px solid lightgrey;
+  float: right;
+  box-shadow: 2px 2px 6px 2px grey;
+}
+
 /*.container .group-btns .active {
    background-color : #9DD3E0;
  }*/

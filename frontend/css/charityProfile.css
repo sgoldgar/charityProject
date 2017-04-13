@@ -64,6 +64,11 @@ a {
 .address {
   margin-bottom: 5%;
 }
+
+.telephone{
+  margin-left: 5%;
+}
+
 /*rows for about us and donations*/
 .about-info, .donations-needed{
   margin-left: 6%;
