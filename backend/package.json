@@ -6,6 +6,10 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "bcrypt": "^1.0.2",
+=======
+>>>>>>> dev
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
@@ -16,6 +20,7 @@
     "express": "~4.14.1",
     "mongoose": "^4.9.4",
     "morgan": "~1.7.0",
+    "node-gyp": "^3.6.0",
     "serve-favicon": "~2.3.2",
     "socketio": "^1.0.0"
   }
