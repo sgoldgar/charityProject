@@ -27,7 +27,16 @@
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li> <a href="#">Help</a></li>
-              <li><a href="#">Profile</a></li>
+              <li>
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Profile
+                  <span class="caret"></span></button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="profileEdit.html">Edit Profile</a>
+                    <a href="homepage.html" class="signOut">Sign Out</a>
+                  </div>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
@@ -295,6 +304,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/lightboxModal.js"></script>
   <script type="text/javascript" src="js/profileEdit.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
