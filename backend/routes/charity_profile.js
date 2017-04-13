@@ -6,8 +6,10 @@ var charityconn = require('../db/charity_db'),
   console.log('test');
 
 
+
   router.patch('/push', function(req, res, next) {
    charity_model.findOne({email: req.body.LOCALEMAIL}, function(err, charity) {
+
      if (err) console.log(err);
 
      console.log("charity", charity);
@@ -42,7 +44,7 @@ var charityconn = require('../db/charity_db'),
               charity.zip = req.body.zip || charity.zip;
               charity.hours = req.body.hours || charity.hours;
               charity.needs = req.body.needs || charity.needs;
-              
+
     console.log("req.body.email", req.body.email);
     console.log("charityAFTER", charity);
 
