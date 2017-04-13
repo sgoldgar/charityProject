@@ -56,29 +56,29 @@ $(function() {
 
 // submitting button search parameters
 $(".submitSearch").on('click', function(){
-// event.preventDefault();
-// var needSearch = [] ;
-needSearch = "";
-//  var myobj = JSON.parse('{ "hello":"world" }');
-// alert(myobj.hello); // 'world'
-$.each($(".selectit"), function(){
+    // event.preventDefault();
+    // var needSearch = [] ;
+    needSearch = "";
+    //  var myobj = JSON.parse('{ "hello":"world" }');
+    // alert(myobj.hello); // 'world'
+    $.each($(".selectit"), function(){
 
-      //var myobj = JSON.parse('{ "addobject":"'+$(this).text()+'" }');
-      //needSearch.push(myobj.addobject);
+          //var myobj = JSON.parse('{ "addobject":"'+$(this).text()+'" }');
+          //needSearch.push(myobj.addobject);
 
-      if (needSearch == ""){
-         needSearch = $(this).text()
-      }else {
-         needSearch = needSearch + "," + $(this).text();
-      }
+          if (needSearch == ""){
+             needSearch = $(this).text()
+          }else {
+             needSearch = needSearch + "," + $(this).text();
+          }
 
-      console.log('need search', needSearch)
+          console.log('need search', needSearch)
+
+      });
+      console.log('needSearch ', needSearch);
+      findNeeds(needSearch);
 
   });
-  console.log('needSearch ', needSearch);
-  findNeeds(needSearch);
-
-});
 
  //ajax call to match needs to database
 
@@ -173,4 +173,8 @@ function findNeeds(needs){
    }; //end response for loop
  }); //end charitySearchResults.done
 
+
 };
+
+ };
+
