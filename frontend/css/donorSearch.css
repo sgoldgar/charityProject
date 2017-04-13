@@ -70,19 +70,22 @@ h3, .search-items p {
   display: inline-block;
   background: white;
   margin: 5% 15%;
+  box-shadow: 2px 3px 25px 5px rgba(0,0,0,0.71);
 }
 
-.result-container p, .result-container li, .result-container h4 {
+.result-container p, .result-container li {
   color: black;
 }
 
 .result-container .charity-logo {
   padding: 0 0 0 10%;
   min-height: 200px;
+  margin-top: -10%;
 }
 
 .result-container .inner-title {
   margin: 3% 0 3% 35%;
+  text-decoration: underline;
 }
 
 .result-container .address p:nth-child(2n) {
@@ -94,11 +97,24 @@ h3, .search-items p {
 }
 
 .result-container .email-icon {
-  margin-left: 40px;
+  margin-right: 8%;
   min-height: 25px;
+  float: right;
 }
 
 .result-container .needs-text {
   float: right;
-  margin-right: 10%;
+  margin-right: 18%;
+  margin-top: -30%;
+}
+
+.result-container .needs-text h4 {
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.result-container .needs-text li {
+  list-style: none;
+  font-weight: bold;
 }
