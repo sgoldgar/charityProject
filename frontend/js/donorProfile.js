@@ -7,7 +7,7 @@ $(function() {
     var getNeeds = $.ajax({
     url: databaseUrl,
     image:
-    name: 
+    name:
   });
   console.log(getNeedsData());
 });
