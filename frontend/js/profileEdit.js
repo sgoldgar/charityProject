@@ -167,9 +167,8 @@ function pullcharityinfo(){
 }
 
 // This changes the form borders and alerts user to changes in profile
-$('#changesSaved').on('click', function(){
 
-  // e.preventDefault();
+$('#changesSaved').on('submit', function(){
 
   console.log('clicked');
   $('.saveInput').css('border', 'none');

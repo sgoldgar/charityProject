@@ -130,3 +130,10 @@ a {
   width: 30%;
   display: inline-block;
 }
+
+.inset-map {
+  border: 2px solid silver;
+  padding: 0px;
+  max-height: 45%;
+  max-width: 85%;
+}
