@@ -30,7 +30,7 @@ $(function(){
 				localStorage.setItem('username', username);
 
 				if (response.goto==='charityportal'){
-					window.location.href = 'charityProfile.html';
+					window.location.href = 'profileEdit.html';
 				}else if (response.goto==='donatorportal'){
 					window.location.href = 'donorProfile.html';
 				}
@@ -99,7 +99,7 @@ $(function(){
 
     	pushcharity.done(function(response){
     		console.log("charitypushYATA ", response);
-    		window.location.href = 'charityProfile.html'
+    		window.location.href = 'profileEdit.html'
     	});
     }
 
