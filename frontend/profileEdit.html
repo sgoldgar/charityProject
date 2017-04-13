@@ -82,7 +82,7 @@
           <div class="col-md-8 col-sm-12 col-xs-12">
             <h2 class="inner-title">Profile</h2>
             <section class="inner-content">
-              <form class="profile-edit" action="profile" method="post" data-toggle="validator">
+              <form class="profile-edit" data-toggle="validator">
 
                 <!-- upload custom profile image -->
                 <!-- <input type="file" name="pic" accept="image/*"> -->
@@ -99,16 +99,16 @@
 
                   <label for="charityName">Organization Name</label><br>
                   <input type="text" id="orgName" name="charityName" required>
-                  <label>What do you need?</label>
+            <!--       <label>What do you need?</label>
                   <select name="needs">
-                    <option selected>---</option>
+                    <option selected>-</option>
 
                     <option value="householdGoods">Household Goods</option>
                     <option value="money">Money</option>
                     <option value="dryGoods">Dry Goods</option>
                     <option value="volunteer">Volunteer Time</option>
                     <option value="meals">Meals</option>
-                  </select>
+                  </select> -->
 
               </div>
 
@@ -190,15 +190,15 @@
               <!-- Text box for company bio -->
               <div>
                 <label for="bio">Company Bio</label><br>
-                <textarea name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
+                <textarea id="bio" name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
               </div>
 
               <!-- Email and Profile admin -->
               <div>
                 <label for="profileManager">Profile Manager</label><br>
-                <input type="text" name="profileManager"><br>
+                <input id="profile" type="text" name="profileManager"><br>
                 <label for="email">Email Address</label><br>
-                <input type="email" name="email" required>
+                <input id="emailInput" type="email" name="email" required>
               </div>
 
               <!-- Update Password -->
