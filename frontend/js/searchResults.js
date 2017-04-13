@@ -64,7 +64,7 @@ $(document).ready(function(){
                       '</ul>' +
                   /*APPEND EMAIL BUTTON*/
                   '<div class="col-md-4 col-sm-4 col-xs-4">' +
-                      '<img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon">' +
+                      '<a href="mailto:'+charities.email+'"><img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"></a>' +
                   '</div>' +
                 /*END CONTAINER*/
                 '</div>'
