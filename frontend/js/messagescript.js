@@ -1,5 +1,5 @@
 
-    
+
 $(function(){
 
 
@@ -31,7 +31,7 @@ $(function(){
         socket.on('posts', function (data) {
             console.log("socketreturndata: ", data);
             //$('body').append('<p> usr: '+data.usr+' msg: '+data.msg+'</p>')
-            
+
             $('.msgs').html(' ');
 
 
@@ -44,7 +44,7 @@ $(function(){
             // })
 
         });
-      
+
     }
 
 
@@ -73,4 +73,3 @@ $(function(){
     main();
 
  });
-
