@@ -32,11 +32,11 @@ $(function(){
             console.log("socketreturndata: ", data);
             //$('body').append('<p> usr: '+data.usr+' msg: '+data.msg+'</p>')
             
-            $('.messagebox').html(' ');
+            $('.msgs').html(' ');
 
 
             for (var i=data.length-11;i<data.length;i++){
-                 $(".messagebox").append('<p> usr: '+data[i].usr+' msg: '+data[i].msg+'</p>')
+                 $(".msgs").append('<p> usr: '+data[i].usr+' msg: '+data[i].msg+'</p>')
             }
 
             // data.forEach(function(dot){
@@ -48,16 +48,21 @@ $(function(){
     }
 
 
+                        // <div class="msgs"></div>
+                        // <textarea rows="4" cols="50" name="comment" form="msgform"> enter msg here </textarea>
+
+
     function main(){
 
         socketfunk();
 
-        $(".messageenter").keyup(function(event){
+        $(".msgform").keyup(function(event){
+            console.log('1');
              if(event.keyCode == 13){
-
+                console.log('2');
                     var usr = localStorage.getItem('username');
-                    var msg = $('.messageenter').val();
-                    $('.messageenter').val("");
+                    var msg = $('.msgform').val();
+                    $('.msgform').val("");
                     console.log('usr ', usr, ' msg ', msg);
                     sendmsg(usr, msg);
 
