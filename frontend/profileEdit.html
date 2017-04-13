@@ -27,7 +27,14 @@
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li> <a href="#">Help</a></li>
-              <li><a href="#">Profile</a></li>
+              <li>
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Profile</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="/profileEdit.html">Edit Profile</a>
+                    <a href="homepage.html" class="signOut">Sign Out</a>
+                  </div>
+              </li>
             </ul>
           </nav>
         </div>
@@ -46,7 +53,7 @@
           <div class="greetings">
             <!-- name and greeting will be generated from ajax call and add an exclamation point, add id on jquery-->
             <div class="greeting-container">
-              <h2>Greetings <br><span>NAME!</span></h2>
+              <h2>Greetings <br><span span class="charityProfileName"></span></h2>
             </div>
             <div class="greeting-image-container">
               <img src="assets/Profile-Icon.svg" alt="profile-picture">
@@ -198,7 +205,7 @@
                      <input id="emailInput" class="form-control saveInput" type="email" name="email" required>
                   <br>
                   <button class="button" id="changesSaved" type="submit" name="saveChanges">Save Changes</button>
-                </div> <!--closes class col-md)--> 
+                </div> <!--closes class col-md)-->
               </form>
             </div>
           </section>
@@ -295,6 +302,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/lightboxModal.js"></script>
   <script type="text/javascript" src="js/profileEdit.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
