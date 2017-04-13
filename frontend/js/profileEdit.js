@@ -58,7 +58,7 @@ console.log('sanity check');
 
 $(function(){
 
-//need to populate the following fields 
+//need to populate the following fields
 
 //Organization Name
 //id orgName
@@ -108,7 +108,7 @@ function pushcharityinfo(){
 
   var pushdata = {
     LOCALEMAIL: LOCALEMAIL,
-    charityName: organizationName, 
+    charityName: organizationName,
     bio: bio,
     phoneNumber: phoneNumber,
     profileManager: profileManager,
@@ -168,13 +168,16 @@ function pullcharityinfo(){
 
 // This changes the form borders and alerts user to changes in profile
 $('#changesSaved').on('click', function(){
+
+  // e.preventDefault();
+
   console.log('clicked');
   $('.saveInput').css('border', 'none');
   $('#changesSaved').text('Changes Saved').css("background-color", "#00B7D1")
 });
 
 function main(){
-  
+
   pullcharityinfo();
 
   console.log("localStorage", localStorage.getItem("username"));
