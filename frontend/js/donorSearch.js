@@ -112,6 +112,8 @@ function findNeeds(needs){
     "box-shadow" : "2px 2px 2px 2px grey"
   })
 
+  $('.search-results-container').html('');
+
   /*Create array of all unique charities*/
   var allCharities = [];
 
