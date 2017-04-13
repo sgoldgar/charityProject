@@ -57,9 +57,10 @@ router.post("/signup/charitypost", function(req,res,next){
 	console.log('req.name ', req.name, " req.name ", req.name);
 
 	var newCharity = new charity_model({
-		name: req.body.name,
-		address: req.body.address,
-    email: req.body.email
+    profileManager:req.body.profileManager,
+    email: req.body. email,
+    streetAddress: req.body.streetAddress,
+    charityName: req.body.charityName
 	});
 
   newCharity.save(function(err, post){
