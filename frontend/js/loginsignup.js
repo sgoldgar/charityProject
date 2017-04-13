@@ -42,6 +42,7 @@ $(function(){
 
 
 	function pushdonatorinfo(){
+		console.log('got to pushdonatorinfo');
 		var url = 'http://localhost:3000/login/signup/donatorpost';
 
 		var name = $('.donorname').val();
@@ -74,19 +75,19 @@ $(function(){
     function pushcharityinfo(){
     	var url = 'http://localhost:3000/login/signup/charitypost';
 
-    	var name = $(".charityorginizationname").val();
-    	var address = $(".charityaddress").val();
-    	var organizationname = $(".charityorginizationname").val();
-			var email = $('.charityemail').val();
+    	var profileManager = $(".profileManager").val();
+    	var streetAddress = $(".charityaddress").val();
+    	var charityName = $(".charityorginizationname").val();
+		var email = $('.charityemail').val();
 
-    	console.log(" name ", name, " address ", address);
+    	console.log(" name ", charityName, " address ", streetAddress);
 
     	var data2 = {
     		//bio: name,
-    		profileManager: me,
+    		profileManager: profileManager,
 				email: email,
-    		streetAddress: address,
-    		charityName: organizationname
+    		streetAddress: streetAddress,
+    		charityName: charityName
     	};
 
     	var pushcharity = $.ajax({
@@ -127,10 +128,10 @@ $(function(){
 
 				alert('user succesfully added to the db');
 				if (type === "charity"){
-					pushcharityinfo();	
+					pushcharityinfo();
 				}else if (type === "donator"){
 					pushdonatorinfo();
-				}					
+				}
 
 			}
 			if (response.status==='reject'){
@@ -167,4 +168,3 @@ $(function(){
 			}
 	});
 })
-

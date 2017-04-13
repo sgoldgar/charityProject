@@ -29,28 +29,52 @@ $(document).ready(function(){
 
 		// there will be more to this when ajax call introduced
 
-	$('.logIn').click(function(e){
+	$('#googleLogSocial').click(function(e){
+		e.preventDefault();
+		$('#logInPopup').modal('hide');
+		// $('#sign-in').hide();
+		// // $('.dropButton').show();
+		// window.location.href='charityProfile.html';
+	});
+
+	$('#facebookLogSocial').click(function(e){
 		e.preventDefault();
 		$('#logInPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='charityProfile.html';
+		//window.location.href='charityProfile.html';
 	});
 
-	$('#signUp').click(function(e){
+	$('#googleSignSocial').click(function(e){
 		e.preventDefault();
 		$('#signUpPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='profileEdit.html';
+		//window.location.href='profileEdit.html';
 	});
 
-	$('#joinUp').click(function(e){
+	$('#facebookSignSocial').click(function(e){
+		e.preventDefault();
+		$('#signUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		// window.location.href='profileEdit.html';
+	});
+
+	$('#googleJoinSocial').click(function(e){
 		e.preventDefault();
 		$('#joinUpPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='donorProfile.html';
+		//window.location.href='donorProfile.html';
+	});
+
+	$('#facebookJoinSocial').click(function(e){
+		e.preventDefault();
+		$('#joinUpPopup').modal('hide');
+		// $('#sign-in').hide();
+		// $('.dropButton').show();
+		// window.location.href='donorProfile.html';
 	});
 
 	$('.close').click(function(e){
@@ -64,31 +88,5 @@ $(document).ready(function(){
 		$('#contactPopup').modal('hide');
 
 	});
-
-
-
-function personalizeProfile(){
-
-    var url = 'http://localhost:3000/donorprofile';
-    var data = {
-     	name: name,
-     // img: img
-   };
-
-   var personalize = $.ajax({
-   type: 'GET',
-   url: url,
-   data: data
-    });
-
-    personalize.done(function(response){
-        console.log('response: ', response);
-
-
-     });
-    }
-
-
-    personalizeProfile();
 
 });

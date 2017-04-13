@@ -21,6 +21,7 @@ var donator_routes = require('./routes/donator_routes');
 var login_routes = require('./routes/login_routes');
 var charity_profile = require('./routes/charity_profile');
 var donor_profile = require('./routes/donor_profile');
+var charity_sidebar = require('./routes/charity_sidebar');
 
 
 
@@ -57,6 +58,7 @@ app.use('/charityportal', charity_routes);
 app.use('/donatorportal', donator_routes);
 app.use('/charityprofile', charity_profile);
 app.use('/donorprofile', donor_profile);
+app.use('/charitysidebar', charity_sidebar);
 
 
 var http = require('http');

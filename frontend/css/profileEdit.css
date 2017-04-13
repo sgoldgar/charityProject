@@ -1,6 +1,6 @@
-.profile-edit {
+.form-group {
   box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.18);
-  padding: 10px;
+  padding: 20px 10px;
   background-color: #FFFFFF;
   color: #9B9B9B;
   font-family: Arial;
@@ -8,7 +8,7 @@
   border-radius: 5px;
 }
 
-.profile-edit input, textarea {
+.form-group input, textarea {
   border-radius: 5px;
 }
 
@@ -17,7 +17,7 @@ h2.inner-title {
   font-family: Arial;
   font-size: 36px;
   font-weight: bold;
-  margin: 5% 0;
+  margin: 3% 0;
 }
 
 textarea {
@@ -27,4 +27,14 @@ textarea {
 
 .cb span {
   margin-left: 10px;
+}
+
+.custom-file {
+  background: gray;
+  width: 100%;
+  height: 15em;
+}
+
+.form-inline > * {
+   margin:5px 35px;
 }
