@@ -42,7 +42,7 @@ $(document).ready(function(){
 		$('#logInPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='charityProfile.html';
+		//window.location.href='charityProfile.html';
 	});
 
 	$('#googleSignSocial').click(function(e){
@@ -50,7 +50,7 @@ $(document).ready(function(){
 		$('#signUpPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='profileEdit.html';
+		//window.location.href='profileEdit.html';
 	});
 
 	$('#facebookSignSocial').click(function(e){
@@ -66,7 +66,7 @@ $(document).ready(function(){
 		$('#joinUpPopup').modal('hide');
 		// $('#sign-in').hide();
 		// $('.dropButton').show();
-		window.location.href='donorProfile.html';
+		//window.location.href='donorProfile.html';
 	});
 
 	$('#facebookJoinSocial').click(function(e){
