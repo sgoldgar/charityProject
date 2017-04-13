@@ -237,6 +237,23 @@ form input {
   text-align: center;
 }
 
+/*messages*/
+.chatBox {
+  border: 3px solid #0ac2db;
+}
+
+.chatList {
+  padding: 0px;
+}
+
+.chatList li {
+  font-size: 10px;
+  padding: 10%;
+  font-weight: 200;
+  border: 3px solid #0ac2db;
+  list-style: none;
+}
+
 /*FOOTER*/
 footer{
   background-color: #616161;

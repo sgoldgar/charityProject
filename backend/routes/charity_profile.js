@@ -6,7 +6,7 @@ var charityconn = require('../db/charity_db'),
   console.log('test');
 
   router.patch('/', function(req, res, next) {
-   charity_model.findByOne({email: req.body.email}, function(err, student) {
+   charity_model.findByOne({email: req.body.email}, function(err, charity_model) {
      if (err) console.log(err);
 
      charity_model.charityName = req.body.charityName || charity_model.charityName;
