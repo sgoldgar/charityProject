@@ -32,11 +32,16 @@ $(function(){
             console.log("socketreturndata: ", data);
             //$('body').append('<p> usr: '+data.usr+' msg: '+data.msg+'</p>')
             
-            $('.msgs').html(' ');
+            $('.messagebox').html(' ');
 
-            data.forEach(function(dot){
-                $(".msgs").append('<p> usr: '+dot.usr+' msg: '+dot.msg+'</p>')
-            })
+
+            for (var i=data.length-11;i<data.length;i++){
+                 $(".messagebox").append('<p> usr: '+data[i].usr+' msg: '+data[i].msg+'</p>')
+            }
+
+            // data.forEach(function(dot){
+            //     $(".msgs").append('<p> usr: '+dot.usr+' msg: '+dot.msg+'</p>')
+            // })
 
         });
       
@@ -47,37 +52,16 @@ $(function(){
 
         socketfunk();
 
+        $(".messageenter").keyup(function(event){
+             if(event.keyCode == 13){
 
+                    var usr = localStorage.getItem('username');
+                    var msg = $('.messageenter').val();
+                    $('.messageenter').val("");
+                    console.log('usr ', usr, ' msg ', msg);
+                    sendmsg(usr, msg);
 
-        // $(".messageenter").keyup(function(event){
-        //      if(event.keyCode == 13){
-        //         $('.messageenter').val("");
-
-
-
-
-
-
-                
-        //      }
-        // });
-
-
-        $('form').submit(function(e){
-            e.preventDefault();
-            
-            var localusr = localStorage.getItem('username');
-            console.log('localusr ', localusr);
-            if (localusr!=null){
-            	var usr = localusr
-            }else{
-            	var usr = $('form').find('input[name="usrname"]').val();
-            }
-
-            var msg = $('textarea').val();
-            console.log('usr ', usr, ' msg ', msg);
-            sendmsg(usr, msg);
-            
+             }
         });
 
     }
