@@ -145,10 +145,13 @@ function findNeeds(needs){
        $('.search-results-container').append(  //need to add search-results-container to HTML
          '<div class="result-container">' + //make a div to contain a single result
            /*APPEND CHARITY NAME AND EMAIL ICON*/
-           '<h3 class="inner-title">' + allCharities[j].name +'<span class="email-icon"><a href="mailto:'+allCharities[j].email+'"><img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"></a></h3>' +
+           '<a href="charityProfile.html"><h3 class="inner-title">' + allCharities[j].name +'</a> <span class="email-icon"><a href="mailto:'+allCharities[j].email+'"><img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"></a></h3>' +
            /*APPEND CHAIRITY LOGO*/
            '<div class="col-md-4 col-sm-4 col-xs-4">' +
-             '<img class="charity-logo" src="'+ allCharities[j].img+'" alt="' + allCharities[j].name + ' logo">' +
+
+            '<a href=charityProfile.html>' +
+             '<img class="charity-logo" src="' + allCharities[j].img +'" alt="' + allCharities[j].name + ' logo">' +
+             '</a>' 
            '</div>' +
            /*APPEND CHARITY INFO*/
            '<div class="col-md-8 col-sm-8 col-xs-8">' +
