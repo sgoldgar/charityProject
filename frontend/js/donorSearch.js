@@ -151,7 +151,7 @@ function findNeeds(needs){
 
             '<a href=charityProfile.html>' +
              '<img class="charity-logo" src="' + allCharities[j].img +'" alt="' + allCharities[j].name + ' logo">' +
-             '</a>' 
+             '</a>' +
            '</div>' +
            /*APPEND CHARITY INFO*/
            '<div class="col-md-8 col-sm-8 col-xs-8">' +
