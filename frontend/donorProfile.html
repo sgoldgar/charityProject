@@ -8,6 +8,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/donorSearch.css">
+    <link rel="stylesheet" href="css/donorProfile.css">
   </head>
 
   <body>
@@ -94,52 +95,31 @@
           <!-- main content, changes based on where you navigate -->
           <!-- The main section goes here. -->
 
+            <div class="container main-container">
+              <div class="col-md-8 col-sm-12 col-xs-12">
+                <h2 class="inner-title">Search Needs</h2>
+                <section class="inner-content">
 
-              <div class="joinBar">
-                <p>Not a Member Yet? <a href="#" class="join">Join</a> now for free.</p>
+                  <div class="row search-items">
+                    <div class="group-btns col-md-7"  data-toggle="buttons">
+                       <label class="btn btn-primary"> <input type="checkbox" name="need"> Household Goods </label>
+                       <label class="btn btn-primary"><input type="checkbox" name="need"> Money </label>
+                       <label class="btn btn-primary"><input type="checkbox" name="need"> Dry Goods</label>
+                       <label class="btn btn-primary"><input type="checkbox" name="need"> Volunteer Time </label>
+                       <label class="btn btn-primary"><input type="checkbox" name="need"> Meals </label>
+                       <label type="submit" class="btn btn-info submitSearch"><img src="assets/search-icon.svg"</label>
+                     </div>
+                  </div>
+
+                  <!-- search results -->
+                  <div class="search-results-container"></div>
+
+                </section>
               </div>
 
-            <div class="container main-container">
-
-                <div class="row search-items">
-                  <div class="searchHeadText">
-
-                  <h3>Search donation types to find a local charity that needs your help!</h3>
-                  <p>Click on your contribution(s) and then the search icon to get a listings from local charities.</p>
-                  <br/>
-                  </div>
-                  <div class="group-btns col-md-7"  data-toggle="buttons">
-                     <label class="btn btn-primary"> <input type="checkbox" name="need"> Household Goods </label>
-                     <label class="btn btn-primary"><input type="checkbox" name="need"> Money </label>
-                     <label class="btn btn-primary"><input type="checkbox" name="need"> Dry Goods</label>
-                     <label class="btn btn-primary"><input type="checkbox" name="need"> Volunteer Time </label>
-                     <label class="btn btn-primary"><input type="checkbox" name="need"> Meals </label>
-                     <label type="submit" class="btn btn-info submitSearch"><img src="assets/search-icon.svg"</label>
-                   </div>
-                </div>
-
-                <!-- search results -->
-                <div class="search-results-container"></div>
-
-                <br/>
-                <div class="row">
-                    <div class="col-xs-12 col-md-6 partners col-md-offset-3">
-                      <p>Since 2017, CharityWish has partnered with over 50 local non-profits to help meet the needs of the Austin Community.</p>
-                      <ul>
-                        <li><img src="assets/UUMC-Square-Logo.svg" /></li>
-                        <li><img src="assets/Logo_CTFB_square.svg" /></li>
-                        <li><img src="assets/LogoMealsonWheels-square.svg" /></li>
-                      </ul>
-                    </div>
-                </div> <!-- closes row-->
 
               </div> <!-- closes main-container -->
-              <br/>
 
-          <div class="col-md-8 col-sm-12 col-xs-12">
-            <h2 class="inner-title">Search Needs</h2>
-            <section class="inner-content"></section>
-          </div>
         </div>
 
       </div>
