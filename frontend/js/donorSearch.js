@@ -148,7 +148,7 @@ function findNeeds(needs){
            '<h3 class="inner-title">' + allCharities[j].name +'<span class="email-icon"><a href="mailto:'+allCharities[j].email+'"><img class="icon email-icon" src="assets/Mail Icon-14.png" alt="email icon"></a></h3>' +
            /*APPEND CHAIRITY LOGO*/
            '<div class="col-md-4 col-sm-4 col-xs-4">' +
-             '<img class="charity-logo" src="' + allCharities[j].img +'" alt="' + allCharities[j].name + ' logo">' +
+             '<img class="charity-logo" src="'+ allCharities[j].img+'" alt="' + allCharities[j].name + ' logo">' +
            '</div>' +
            /*APPEND CHARITY INFO*/
            '<div class="col-md-8 col-sm-8 col-xs-8">' +
