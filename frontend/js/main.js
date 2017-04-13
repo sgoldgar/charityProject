@@ -48,25 +48,26 @@ window.onclick = function(event) {
 function personalizeProfile(){
 
     var url = 'http://localhost:3000/donorprofile';
+    var email = localStorage.getItem("username");
+    console.log('email', email);
     var data = {
-     	name: name,
+     	email: email
      // img: img
    };
 
+
    var personalize = $.ajax({
-   type: 'GET',
-   url: url,
-   data: data
-    });
+           type: 'POST',
+           url: url,
+           data: data
+         }, console.log("data: ", data));
+
 
     personalize.done(function(response){
         console.log('response: ', response);
-
-
+        $('.donorName').html("<p>"+response[0].name+"</p>");
      });
-    }
+}
 
 
     personalizeProfile();
-
-});
