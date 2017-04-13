@@ -61,28 +61,28 @@
                   <span class="plus-sign">+<br>
                   </span> Add <br>Request
                 </button>
-            </li>
-            <!-- messages link -->
-            <li>
-              <a href="messages.html">Messages</a>
-            </li>
-            <!-- notifications link -->
-            <li>
-              <a href="#">Notifications</a>
-            </li>
-            <!-- event calendar -->
-            <li>
-              <a href="#">Event Calendar</a>
-            </li>
-          </ul>
-        </div>
-        <!-- main content, changes based on where you navigate -->
-        <div class="col-md-8 col-sm-12 col-xs-12">
-          <h2 class="inner-title">Profile</h2>
-          <section class="inner-content">
-            <div class="form-group row">
 
-              <form class="profile-edit" action="profile" method="post" data-toggle="validator">
+              </li>
+              <!-- messages link -->
+              <li>
+                <a href="messages.html">Messages</a>
+              </li>
+              <!-- notifications link -->
+              <li>
+                <a href="#">Notifications</a>
+              </li>
+              <!-- event calendar -->
+              <li>
+                <a href="#">Event Calendar</a>
+              </li>
+            </ul>
+          </div>
+          <!-- main content, changes based on where you navigate -->
+          <div class="col-md-8 col-sm-12 col-xs-12">
+            <h2 class="inner-title">Profile</h2>
+            <section class="inner-content">
+              <div class="form-group row">
+              <form class="profile-edit" data-toggle="validator">
                 <div class="col-md-4">
                   <!-- upload custom profile image -->
                   <!-- <input type="file" name="pic" accept="image/*"> -->
@@ -93,6 +93,7 @@
                   </label>
                 </div>
 
+
                 <!-- Organization Name -->
                 <div class="col-md-8">
                   <label for="charityName">Organization Name</label>
@@ -101,13 +102,12 @@
                   <label>What do you need?</label>
                   <select class="form-control" name="needs">
                     <option selected>---</option>
-
                     <option value="householdGoods">Household Goods</option>
                     <option value="money">Money</option>
                     <option value="dryGoods">Dry Goods</option>
                     <option value="volunteer">Volunteer Time</option>
                     <option value="meals">Meals</option>
-                  </select>
+                  </select> -->
 
                   <!-- Organization address -->
                   <label for="streetAddress">Organization Address</label>
@@ -175,31 +175,30 @@
                       	<option value="WY">Wyoming</option>
                       </select>
                     <input class="form-control" type="text" id="zip" placeholder="5 Digit Zip Code" name="zip" pattern="[0-9]{5}" required>
-                  </div>
+                  </div> <!--closes div form-inline-->
                   <br>
                   <label for="phoneNumber">Phone Number</label>
-                  <input class="form-control" type="text" id="phoneNumber" name="phoneNumber">
+                      <input class="form-control" type="text" id="phoneNumber" name="phoneNumber">
                   <br>
                   <label for="hours">Hours of Operation</label>
-
-                  <input class="form-control" type="text" id="hours" name="hours">
+                      <input class="form-control" type="text" id="hours" name="hours">
                   <br>
                   <label for="website">Company Website</label>
-                  <input class="form-control" type="text" id="website" name="website">
+                    <input class="form-control" type="text" id="website" name="website">
                   <br>
                   <!-- Text box for company bio -->
                   <label for="bio">Company Bio</label>
                   <br>
-                  <textarea class="form-control" name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
+                  <textarea id="bio"class="form-control" name="bio" rows="8" cols="80" placeholder="Write something for your profile..."></textarea>
                   <br>
                   <!-- Email and Profile admin -->
-                  <label for="profileManager">Profile Manager</label><br>
-                  <input class="form-control" type="text" name="profileManager"><br>
+                  <label  for="profileManager">Profile Manager</label><br>
+                      <input id="profile" class="form-control" type="text" name="profileManager"><br>
                   <label for="email">Email Address</label><br>
-                  <input class="form-control" type="email" name="email" required>
+                     <input id="emailInput" class="form-control" type="email" name="email" required>
                   <br>
                   <button class="button" type="submit" name="saveChanges">Save Changes</button>
-                </div>
+                </div> <!--closes class col-md)--> 
               </form>
             </div>
           </section>

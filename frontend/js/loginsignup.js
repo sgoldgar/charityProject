@@ -78,7 +78,7 @@ $(function(){
     	var profileManager = $(".profileManager").val();
     	var streetAddress = $(".charityaddress").val();
     	var charityName = $(".charityorginizationname").val();
-			var email = $('.charityemail').val();
+		var email = $('.charityemail').val();
 
     	console.log(" name ", charityName, " address ", streetAddress);
 
