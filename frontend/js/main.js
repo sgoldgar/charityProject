@@ -8,8 +8,11 @@ $(function() {
 
 //profile drop down
 function myFunction() {
-    $("#myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
 }
+// function myFunction() {
+//     $("#myDropdown").classList.toggle("show");
+// }
 // $('.drpbtn').hover(function(e){
 //   $('#myDropdown').toggle();
 // })
@@ -27,6 +30,10 @@ window.onclick = function(event) {
     }
   }
 };
+
+ // $('.signOut').on('click', function() {
+ //   localStorage.clear();
+ // });
 //
 // $('.drpbtn').hover(function(e){
 //   $('#myDropdown').toggle()
@@ -97,7 +104,7 @@ function personalizeProfile(){
           charityLookup();
         }
      });
-}
+};
 
 
     personalizeProfile();
