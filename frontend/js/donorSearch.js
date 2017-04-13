@@ -135,6 +135,13 @@ function findNeeds(needs){
 
    //loop through array of charities and append onto page
    for (var j=0; j<allCharities.length; j++){
+        // var needsArray = [];
+        //
+        // for(var i=0; i<allCharities[j].needs.length; i++){
+        //   needsArray.push(allCharities[j].needs[i]);
+        // }; //end ul for loop
+
+
        $('.search-results-container').append(  //need to add search-results-container to HTML
          '<div class="result-container">' + //make a div to contain a single result
            /*APPEND CHARITY NAME AND EMAIL ICON*/
@@ -159,21 +166,23 @@ function findNeeds(needs){
              '<div class="needs-text">' +
                 '<h4> Needs </h4>' +
                '<ul class="needs">' +
+
                '</ul>' +
          /*END CONTAINER*/
          '</div>'
          );
 
-       //find the ul called needs text created in previous loop and append list items with needs
-       for(var i=0; i<allCharities[j].needs.length; i++){
-         $(".needs-text").append(
-           '<li>' + allCharities[j].needs[i] + '</li>'
-         );
-       }; //end ul for loop
+         //find the ul called needs text created in previous loop and append list items with needs
+         for(var i=0; i<allCharities[j].needs.length; i++){
+           var needsText = $('.result-container').eq(j).find(".needs-text");
+           needsText.append(
+             '<li>' + allCharities[j].needs[i] + '</li>'
+           );
+         }; //end ul for loop
+
    }; //end response for loop
  }); //end charitySearchResults.done
 
 
 };
 
- // };
