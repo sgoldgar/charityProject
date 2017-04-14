@@ -252,11 +252,15 @@ form input {
   padding: 0px;
 }
 
+.chatProfileLogo {
+  margin-right: 10px;
+}
+
 .chatList li {
   font-size: 10px;
   padding: 10%;
   font-weight: 200;
-  border: 3px solid #0ac2db;
+  border: 1px solid #616161;
   list-style: none;
 }
 
