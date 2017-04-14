@@ -5,26 +5,13 @@ var mongoose = require('mongoose'),
 
 
 
-//!ACHTUNG! THESE DB PASSWORDS ARE OUT IN THE WILD - HIDE IN PRODUCTION !ACHTUNG!
-charity_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db1
-donator_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db2
-password_db_conn=mongodb://pweyand:Fvnjty0b@ds153400.mlab.com:53400/wdi_groupproject_db3
-
-
-
-
-
-
-
-
-
 charity_conn = mongoose.createConnection(process.env.charity_db_conn);
 
 charity_conn.on('error', function(err){
   if(err){
   	throw err;
   	console.log(charity_conn);
-  } 
+  }
 });
 
 charity_conn.once('open', function callback () {

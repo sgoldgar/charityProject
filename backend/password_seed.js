@@ -8,8 +8,19 @@ var password = require('./models/password_model');
 
 var password_data = [
   { password: 'LorDPerogi' },
-  { username: 'YumMyTummy' }
+  { username: 'YumMyTummy' },
+  { type: 'charity'}
 ];
+
+
+// var passwordSchema = new mongoose.Schema({
+// 	password: { type: String, required: true }, 
+// 	username: { type: String, required: true },
+// 	type: { type: String, required: true }
+// });
+
+
+
 
 password.create(password_data, function(err, passwords) {
   if (err) {
